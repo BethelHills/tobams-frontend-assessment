@@ -4,27 +4,9 @@ import LearningManagement from "@/components/LearningManagement";
 import TrainingBlocks from "@/components/TrainingBlocks";
 import ManagementProgram from "@/components/ManagementProgram";
 import TransformationHub from "@/components/TransformationHub";
+import TrainingConsultant from "@/components/TrainingConsultant";
 
 export default function TobamsTrainingDevelopmentPreview() {
-  const trainerList = [
-    {
-      title: "Expert-Led Learning",
-      text: "Gain insights from seasoned professionals in the field as they mentor you through the subtleties of business analysis.",
-    },
-    {
-      title: "Comprehensive Curriculum",
-      text: "Access a robust curriculum that covers fundamental principles and advanced methodologies, ensuring a well-rounded understanding.",
-    },
-    {
-      title: "Interactive Workshops",
-      text: "Engage in hands-on workshops designed to enhance your training capabilities and provide practical insights.",
-    },
-    {
-      title: "Internationally Recognized",
-      text: "Upon completion, a globally recognized certification opens doors to new opportunities.",
-    },
-  ];
-
   const testimonials = [
     {
       name: "Anita Yusuf",
@@ -59,32 +41,7 @@ export default function TobamsTrainingDevelopmentPreview() {
 
           <TransformationHub />
 
-          <section className="bg-[#ece5e8] px-5 py-8">
-            <h3 className="text-[15px] font-semibold text-[#7c4c73]">
-              Training The Consultant
-            </h3>
-            <p className="mt-2 text-[8.5px] leading-4 text-[#655b62]">
-              Maximize your potential as a Certified Trainer. With the help of our
-              Training Consultants program, take a revolutionary step toward
-              becoming a distinguished certified trainer.
-            </p>
-            <div className="mt-5 grid gap-3 rounded bg-[#5c0d48] p-4 text-white">
-              {trainerList.map((item) => (
-                <div key={item.title} className="rounded bg-[#6f1b57] p-3">
-                  <h4 className="text-[9px] font-semibold">{item.title}</h4>
-                  <p className="mt-2 text-[8px] leading-4 text-white/80">
-                    {item.text}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <button
-              type="button"
-              className="mt-4 rounded bg-[#6f1c57] px-4 py-2 text-[8px] font-medium text-white"
-            >
-              Learn More
-            </button>
-          </section>
+          <TrainingConsultant />
 
           <section className="px-5 py-8">
             <div className="rounded bg-[#6b0f52] px-8 py-8 text-center text-white">
