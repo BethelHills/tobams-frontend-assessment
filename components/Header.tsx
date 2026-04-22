@@ -5,9 +5,6 @@ const HEADER_IMAGE = "Component 1.png";
 export default function Header() {
   return (
     <header className="px-3 pt-2">
-      <h1 className="mb-2 text-[17px] font-semibold text-[#5f5a61]">
-        Training and Development
-      </h1>
       <div className="overflow-hidden rounded-t-sm bg-white">
         <Image
           src={`/images/${encodeURIComponent(HEADER_IMAGE)}`}
