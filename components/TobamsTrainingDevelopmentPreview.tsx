@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import LearningManagement from "@/components/LearningManagement";
 
 type SplitBlockProps = {
   title: string;
@@ -121,47 +122,7 @@ export default function TobamsTrainingDevelopmentPreview() {
         <main>
           <Hero />
 
-          <section className="bg-[#e9e0e6] px-5 py-8">
-            <div className="grid gap-5">
-              <div className="mx-auto h-44 w-44 rounded-full bg-[radial-gradient(circle_at_30%_30%,#faf7f9,#c9b7c0)] p-3">
-                <div className="h-full w-full rounded-full bg-[linear-gradient(160deg,#d9e2ea,#a0a6af)]" />
-              </div>
-              <div className="rounded bg-[#dfd2da] p-4">
-                <h3 className="text-[12px] font-semibold text-[#7f4b73]">
-                  Learning Management System
-                </h3>
-                <p className="mt-3 text-[8.5px] leading-4 text-[#61545e]">
-                  TG Academy is a hub of knowledge and skill-building resources
-                  designed to empower tech talents on their learning journey. From
-                  technical courses covering the latest programming languages and
-                  development frameworks to soft skills training in leadership,
-                  effective communication and project management, TG Academy offers
-                  a wide range of courses to help learners grow.
-                </p>
-                <p className="mt-3 text-[8px] font-semibold text-[#5c4a57]">
-                  Some of our courses include:
-                </p>
-                <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[7.5px] text-[#6b5c66]">
-                  {[
-                    "Business Analysis",
-                    "Design Thinking",
-                    "Effective Communication",
-                    "Entrepreneurship",
-                    "Career Development",
-                    "Business Model",
-                  ].map((item) => (
-                    <span key={item}>• {item}</span>
-                  ))}
-                </div>
-                <button
-                  type="button"
-                  className="mt-4 rounded bg-[#6f1c57] px-4 py-2 text-[8px] font-medium text-white"
-                >
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </section>
+          <LearningManagement />
 
           <section className="bg-white px-5 py-8">
             <div className="grid gap-6">
