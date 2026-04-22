@@ -3,6 +3,7 @@ import Image from "next/image";
 import { mailtoConsult } from "@/lib/siteNav";
 
 const HUB_IMAGE = "Transformation Hub image.png";
+const BOLT_ICON = "bolt.png";
 
 const topics = [
   "Strategic Career Guidance",
@@ -62,12 +63,13 @@ export default function TransformationHub() {
                       key={topic}
                       className="flex min-h-[68px] items-center gap-4 rounded-[14px] bg-white px-5 text-[18px] leading-[1.3] text-[#292126] md:text-[19px] lg:min-h-[70px] lg:text-[17px]"
                     >
-                      <span
-                        aria-hidden="true"
-                        className="text-[22px] leading-none text-[#751253]"
-                      >
-                        ϟ
-                      </span>
+                      <Image
+                        src={`/images/${encodeURIComponent(BOLT_ICON)}`}
+                        alt=""
+                        width={22}
+                        height={22}
+                        className="h-[22px] w-[22px] shrink-0 object-contain lg:h-5 lg:w-5"
+                      />
                       <span>{topic}</span>
                     </div>
                   ))}
