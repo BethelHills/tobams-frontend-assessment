@@ -2,15 +2,9 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import LearningManagement from "@/components/LearningManagement";
 import TrainingBlocks from "@/components/TrainingBlocks";
+import ManagementProgram from "@/components/ManagementProgram";
 
 export default function TobamsTrainingDevelopmentPreview() {
-  const managementList = [
-    "Enhanced Leadership Skills",
-    "Improved Employee Engagement",
-    "Stronger Organizational Culture",
-    "Sustainable Growth",
-  ];
-
   const transformationList = [
     "Strategic Career Guidance",
     "Leadership Development",
@@ -69,36 +63,7 @@ export default function TobamsTrainingDevelopmentPreview() {
 
           <TrainingBlocks />
 
-          <section className="px-5 py-6">
-            <div className="overflow-hidden rounded-lg bg-[#4a073b] p-4 text-white">
-              <div className="grid gap-4">
-                <div className="h-52 rounded bg-[linear-gradient(135deg,#d9c0a3,#9fc1c8)]" />
-                <div>
-                  <h3 className="max-w-[180px] text-[17px] font-semibold leading-6">
-                    Management Development Program
-                  </h3>
-                  <p className="mt-3 text-[8.5px] leading-4 text-white/80">
-                    Tobams Group offers a comprehensive Management Development
-                    Program designed to equip corporate organisations with the
-                    high-performing leaders they need to thrive.
-                  </p>
-                  <div className="mt-4 space-y-2">
-                    {managementList.map((item) => (
-                      <div
-                        key={item}
-                        className="flex items-center gap-2 rounded bg-[#8b577d]/60 px-3 py-2 text-[8px]"
-                      >
-                        <span className="inline-flex h-3 w-3 items-center justify-center rounded-full bg-white text-[8px] text-[#6d2458]">
-                          ✦
-                        </span>
-                        <span>{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <ManagementProgram />
 
           <section className="px-5 py-6">
             <div className="rounded-lg bg-[#f1d7df] p-4">
