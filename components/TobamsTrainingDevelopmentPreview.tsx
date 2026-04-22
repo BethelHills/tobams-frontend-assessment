@@ -6,26 +6,9 @@ import ManagementProgram from "@/components/ManagementProgram";
 import TransformationHub from "@/components/TransformationHub";
 import TrainingConsultant from "@/components/TrainingConsultant";
 import CallToAction from "@/components/CallToAction";
+import Testimonials from "@/components/Testimonials";
 
 export default function TobamsTrainingDevelopmentPreview() {
-  const testimonials = [
-    {
-      name: "Anita Yusuf",
-      role: "Founder",
-      text: "Working with Tobams Group on our website was a breeze. They understood our brand and transformed it into a beautiful online space. Highly recommend their Website Design service!",
-    },
-    {
-      name: "John Okechukwu",
-      role: "Operations Lead",
-      text: "Tobams Group's Digital Marketing strategies gave our brand the boost it needed. Simple yet powerful techniques that delivered tangible results.",
-    },
-    {
-      name: "Chisom Nnamdi",
-      role: "Business Owner",
-      text: "Tobams Group has been instrumental in our talent acquisition journey. Their Hiring Talent Solution service consistently connects us with the right professionals.",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-[#1f1f1f] py-4 text-[#2c2430]">
       <div className="mx-auto w-full max-w-[430px] bg-[#f5f1f4] shadow-2xl">
@@ -46,32 +29,7 @@ export default function TobamsTrainingDevelopmentPreview() {
 
           <CallToAction />
 
-          <section className="px-5 pb-8">
-            <h3 className="text-center text-[18px] font-semibold text-[#333]">
-              Testimonials
-            </h3>
-            <div className="mt-5 grid gap-3">
-              {testimonials.map((item) => (
-                <article
-                  key={item.name}
-                  className="rounded-lg border border-[#eadfe5] bg-white p-4 shadow-sm"
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="h-8 w-8 rounded-full bg-[#f3c85d]" />
-                    <div>
-                      <h4 className="text-[9px] font-semibold text-[#54494f]">
-                        {item.name}
-                      </h4>
-                      <p className="text-[7.5px] text-[#9a8b94]">{item.role}</p>
-                    </div>
-                  </div>
-                  <p className="mt-3 text-[8px] leading-4 text-[#635860]">
-                    {item.text}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </section>
+          <Testimonials />
         </main>
 
         <footer className="bg-[#220217] text-white">
