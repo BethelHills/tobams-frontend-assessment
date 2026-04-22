@@ -17,22 +17,42 @@ function TrainingBlock({
   imageAlt,
   reverse = false,
 }: TrainingBlockProps) {
-  /** Mobile: heading copy always before image; desktop preserves alternating layout. */
-  const textOrder = reverse
-    ? "order-1 lg:order-2"
-    : "order-1 lg:order-1";
-  const imageOrder = reverse
-    ? "order-2 lg:order-1"
-    : "order-2 lg:order-2";
+  /** Mobile: title → image → body; desktop: alternating two-column layout. */
+  const headingCell = reverse
+    ? "order-1 lg:col-start-2 lg:row-start-1"
+    : "order-1 lg:col-start-1 lg:row-start-1";
+
+  const imageCell = reverse
+    ? "order-2 lg:col-start-1 lg:row-start-1 lg:row-span-2"
+    : "order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2";
+
+  const bodyCell = reverse
+    ? "order-3 lg:col-start-2 lg:row-start-2"
+    : "order-3 lg:col-start-1 lg:row-start-2";
 
   return (
     <section className="w-full">
-      <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-[84px]">
-        <div className={textOrder}>
-          <h2 className="text-[30px] font-medium leading-[1.15] tracking-[-0.02em] text-[#161616] md:text-[38px] lg:text-[58px]">
-            {title}
-          </h2>
-          <p className="mt-3 max-w-[640px] text-[17px] leading-[1.65] text-[#757575] md:text-[18px] lg:mt-[14px] lg:text-[18px]">
+      <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-[84px]">
+        <h2
+          className={`text-[30px] font-medium leading-[1.15] tracking-[-0.02em] text-[#161616] md:text-[38px] lg:text-[58px] ${headingCell}`}
+        >
+          {title}
+        </h2>
+
+        <div className={imageCell}>
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[24px]">
+            <Image
+              src={imageSrc}
+              alt={imageAlt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1023px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+
+        <div className={bodyCell}>
+          <p className="max-w-[640px] text-[17px] leading-[1.65] text-[#757575] md:text-[18px] lg:text-[18px]">
             {description}
           </p>
           <ul className="mt-6 space-y-3 lg:mt-[22px] lg:space-y-[14px]">
@@ -48,18 +68,6 @@ function TrainingBlock({
               </li>
             ))}
           </ul>
-        </div>
-
-        <div className={imageOrder}>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[24px]">
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1023px) 100vw, 50vw"
-            />
-          </div>
         </div>
       </div>
     </section>

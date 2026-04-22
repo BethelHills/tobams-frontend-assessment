@@ -71,7 +71,7 @@ export default function Testimonials() {
               key={item.name}
               className="min-h-[290px] rounded-[22px] border-l-[3px] border-l-[#ff4f63] bg-[#f1f1f1] px-6 py-6 shadow-[0_0_0_1px_rgba(0,0,0,0.02)] lg:min-h-[291px] lg:rounded-[20px] lg:px-[28px] lg:py-[26px]"
             >
-              <div className="flex items-start gap-4">
+              <div className="flex flex-col items-start gap-3 sm:flex-row sm:gap-4">
                 <Image
                   src={item.image}
                   alt={item.name}
@@ -90,7 +90,7 @@ export default function Testimonials() {
                 </div>
               </div>
 
-              <p className="mt-8 text-[19px] leading-[1.65] text-[#2b2b2b] lg:mt-[28px] lg:text-[17px]">
+              <p className="mt-6 text-[19px] leading-[1.65] text-[#2b2b2b] sm:mt-8 lg:mt-[28px] lg:text-[17px]">
                 {item.text}
               </p>
             </article>
