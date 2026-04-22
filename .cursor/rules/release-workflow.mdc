@@ -12,8 +12,10 @@ alwaysApply: true
 3. `git commit -m "update"`
 4. `git push origin main`
 
+**After that, Vercel will auto-deploy** production—as long as this repo is connected to your Vercel project and `main` is set as the production branch. No extra deploy command is required.
+
 Do not skip these Git steps after substantive edits unless the user explicitly asks to hold the release.
 
-**Vercel:** Pushing to `main` triggers production when the project is linked in the dashboard. Do **not** run `npx vercel --prod --yes` on every push.
+**Note:** Do **not** run `npx vercel --prod --yes` on every push; Git integration handles routine releases.
 
 **Manual CLI deploy** only when you truly need it (e.g. outside Git). Requires Vercel login if needed.
