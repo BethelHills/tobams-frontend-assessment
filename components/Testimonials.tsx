@@ -53,6 +53,7 @@ export default function Testimonials() {
 
   return (
     <section
+      id="testimonials"
       aria-labelledby="testimonials-heading"
       className="scroll-mt-4 w-full bg-[#f6f6f6] py-10 md:py-14 lg:py-[56px]"
     >
