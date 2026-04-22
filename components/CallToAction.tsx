@@ -1,42 +1,34 @@
-import Image from "next/image";
-
-import ImageOverlayLink from "@/components/ImageOverlayLink";
-import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
-import {
-  CONTENT_ART_FRAME,
-  CONTENT_IMAGE_CLASS,
-  SECTION_PAD_X,
-  SECTION_PAD_Y,
-} from "@/lib/sectionLayout";
 import { mailtoConsult } from "@/lib/siteNav";
-
-const CTA_IMAGE = "D. CTA.png";
 
 export default function CallToAction() {
   return (
     <section
       id="contact"
-      className={`scroll-mt-4 bg-[#efe8ec] ${SECTION_PAD_X} ${SECTION_PAD_Y}`}
       aria-labelledby="cta-heading"
+      className="scroll-mt-4 w-full bg-[#f6f6f6] py-10 md:py-14 lg:py-[56px]"
     >
       <h2 id="cta-heading" className="sr-only">
         Book a consultation — accelerate growth at your organisation
       </h2>
-      <div className={CONTENT_ART_FRAME}>
-        <Image
-          src={`/images/${encodeURIComponent(CTA_IMAGE)}`}
-          alt=""
-          width={1134}
-          height={204}
-          className={CONTENT_IMAGE_CLASS}
-          sizes={CONTENT_IMAGE_SIZES}
-          role="presentation"
-        />
-        <ImageOverlayLink
-          href={mailtoConsult("Book a consultation")}
-          ariaLabel="Book a consultation"
-          className="right-[4%] top-[20%] h-[58%] w-[min(44%,14rem)] min-h-11 sm:right-[6%] sm:top-[18%] sm:h-[60%]"
-        />
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-[184px]">
+        <div className="rounded-[12px] bg-[#6b0d4f] px-5 py-10 text-center md:px-8 md:py-12 lg:px-[40px] lg:py-[42px]">
+          <div className="mx-auto max-w-[980px]">
+            <p className="text-[21px] font-normal leading-[1.55] tracking-[0.01em] text-white md:text-[24px] lg:text-[18px]">
+              Want to accelerate professional growth and development at your
+              organisation?
+            </p>
+            <p className="mt-1 text-[21px] font-normal leading-[1.55] tracking-[0.01em] text-white md:text-[24px] lg:text-[18px]">
+              See how we can help.
+            </p>
+
+            <a
+              href={mailtoConsult("Book a consultation")}
+              className="mt-8 inline-flex min-h-[56px] items-center justify-center rounded-[4px] bg-[#f4f4f4] px-6 text-[20px] font-medium text-[#6b0d4f] transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#6b0d4f] md:min-h-[58px] md:px-8 md:text-[21px] lg:mt-[28px] lg:min-h-[54px] lg:min-w-[253px] lg:px-[28px] lg:text-[18px]"
+            >
+              Book a Consultation
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
