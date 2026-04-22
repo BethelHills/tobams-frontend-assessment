@@ -2,8 +2,7 @@ import Image from "next/image";
 
 import { mailtoConsult } from "@/lib/siteNav";
 
-const LMS_PHOTO =
-  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop";
+const LMS_IMAGE = "LMS image.png";
 
 const courses = [
   "Business Analysis",
@@ -26,8 +25,8 @@ export default function LearningManagement() {
           <div className="mx-auto w-full max-w-[620px]">
             <div className="relative aspect-square w-full overflow-hidden rounded-full">
               <Image
-                src={LMS_PHOTO}
-                alt="Two professionals standing together in an office"
+                src={`/images/${encodeURIComponent(LMS_IMAGE)}`}
+                alt="TG Academy — learning management and professional development"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1023px) min(100vw, 620px), 620px"
