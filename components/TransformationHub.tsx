@@ -2,6 +2,12 @@ import Image from "next/image";
 
 import ImageOverlayLink from "@/components/ImageOverlayLink";
 import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
+import {
+  CONTENT_ART_FRAME,
+  CONTENT_IMAGE_CLASS,
+  SECTION_PAD_X,
+  SECTION_PAD_Y,
+} from "@/lib/sectionLayout";
 import { mailtoConsult } from "@/lib/siteNav";
 
 const TRANSFORMATION_HUB_IMAGE = "18.png";
@@ -9,19 +15,19 @@ const TRANSFORMATION_HUB_IMAGE = "18.png";
 export default function TransformationHub() {
   return (
     <section
-      className="w-full px-4 sm:px-6 lg:px-8"
+      className={`scroll-mt-4 w-full bg-[#f7f1f5] ${SECTION_PAD_X} ${SECTION_PAD_Y}`}
       aria-labelledby="transformation-hub-heading"
     >
       <h2 id="transformation-hub-heading" className="sr-only">
         Transformation Hub With Ife Newton
       </h2>
-      <div className="relative w-full overflow-hidden rounded-lg sm:rounded-xl lg:rounded-2xl">
+      <div className={CONTENT_ART_FRAME}>
         <Image
           src={`/images/${TRANSFORMATION_HUB_IMAGE}`}
           alt=""
           width={1440}
           height={780}
-          className="pointer-events-none block h-auto w-full max-w-full object-contain object-top"
+          className={`${CONTENT_IMAGE_CLASS} object-top`}
           sizes={CONTENT_IMAGE_SIZES}
           role="presentation"
           decoding="async"

@@ -14,14 +14,14 @@ export default function TobamsTrainingDevelopmentPreview() {
     <div className="min-h-screen bg-[#ebe3e8] text-[#2c2430]">
       <div
         id="page-top"
-        className="mx-auto min-h-screen w-full max-w-7xl overflow-hidden bg-[#f5f1f4] shadow-[0_0_0_1px_rgba(0,0,0,0.04),0_4px_24px_rgba(75,15,60,0.06)] sm:my-4 sm:rounded-xl sm:shadow-md md:my-6 lg:max-w-[90rem] lg:rounded-2xl lg:shadow-lg"
+        className="isolate mx-auto min-h-screen w-full max-w-7xl bg-[#f5f1f4] shadow-[0_0_0_1px_rgba(0,0,0,0.04),0_4px_24px_rgba(75,15,60,0.06)] sm:my-4 sm:rounded-xl sm:shadow-md md:my-6 lg:max-w-[90rem] lg:rounded-2xl lg:shadow-lg"
       >
         <Header />
 
         <main
           id="main-content"
           tabIndex={-1}
-          className="flex flex-col gap-0 pb-10 sm:pb-12 lg:pb-16"
+          className="flex flex-col gap-6 sm:gap-8 lg:gap-10 pb-10 sm:pb-12 lg:pb-16"
         >
           <Hero />
 

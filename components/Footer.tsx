@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import ImageOverlayLink from "@/components/ImageOverlayLink";
 import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
+import { CONTENT_IMAGE_CLASS, SECTION_PAD_X } from "@/lib/sectionLayout";
 import {
   CONTACT_EMAIL,
   CONTACT_PHONE_TEL,
@@ -13,19 +14,19 @@ const FOOTER_IMAGE = "Frame 1618869161.png";
 export default function Footer() {
   return (
     <footer
-      className="w-full bg-[#220217] text-white"
+      className={`w-full bg-[#220217] text-white ${SECTION_PAD_X} pb-6 pt-4 sm:pb-8 sm:pt-6`}
       aria-labelledby="site-footer-heading"
     >
       <h2 id="site-footer-heading" className="sr-only">
         Tobams Group — footer, links, offices, and legal
       </h2>
-      <div className="relative w-full">
+      <div className="relative mx-auto w-full max-w-[min(100%,92rem)] overflow-hidden rounded-t-xl shadow-[0_-8px_40px_-20px_rgba(0,0,0,0.45)] ring-1 ring-white/10 sm:rounded-t-2xl">
         <Image
           src={`/images/${encodeURIComponent(FOOTER_IMAGE)}`}
           alt="Tobams Group footer with contact details, office locations, and policies"
           width={1440}
           height={964}
-          className="block h-auto w-full max-w-full object-contain object-top select-none"
+          className={`${CONTENT_IMAGE_CLASS} object-top select-none`}
           sizes={CONTENT_IMAGE_SIZES}
         />
 
