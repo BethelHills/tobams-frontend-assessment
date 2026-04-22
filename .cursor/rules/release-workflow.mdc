@@ -1,5 +1,5 @@
 ---
-description: After meaningful changes, push to GitHub and deploy to Vercel production
+description: Push to GitHub; Vercel deploys automatically from main
 alwaysApply: true
 ---
 
@@ -8,11 +8,12 @@ alwaysApply: true
 When a task changes application code, configuration, or assets:
 
 1. Run `npm run lint` and `npm run build` from the repo root; fix failures before releasing.
-2. Stage everything that belongs to the change: `git add -A` (or explicit paths).
-3. Commit with a clear message: `git commit -m "<concise message>"`.
-4. Push to **`main`**: `git push origin main`.
-5. **Deploy to Vercel production** from the repo root:  
-   `npx vercel@latest --prod --yes`  
-   Run this after every push so production is updated even if Git integration is slow or misconfigured. If the CLI reports a login error, tell the user to run `npx vercel login` and retry.
+2. Stage changes: `git add .` (or `git add -A` / explicit paths as needed).
+3. Commit: `git commit -m "<clear message>"`.
+4. Push: `git push origin main`.
+
+**Vercel:** With the repo linked in the Vercel dashboard, **pushing to `main` is enough**—production deploys automatically. **Do not** run `npx vercel --prod --yes` on every push.
+
+**Manual CLI deploy** (`npx vercel@latest --prod --yes`) only when you truly need it—for example a one-off manual deploy or testing outside Git. Requires Vercel login if not already authenticated.
 
 Do not leave substantive edits uncommitted or unpushed unless the user asks to hold the release.
