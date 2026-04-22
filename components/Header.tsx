@@ -1,7 +1,11 @@
 "use client";
 
+import Image from "next/image";
+
 import AccountDialogTrigger from "@/components/AccountDialogTrigger";
 import { PRIMARY_NAV } from "@/lib/siteNav";
+
+const HEADER_LOGO = "Seecondary Logo copy 2.png";
 
 const focusRing =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7b1b5d] focus-visible:ring-offset-2";
@@ -18,22 +22,17 @@ export default function Header() {
         <div className="flex flex-wrap items-center justify-between gap-4">
           <a
             href="#page-top"
-            className={`flex min-h-10 items-center gap-2 rounded-md ${focusRing}`}
+            className={`flex min-h-10 items-center rounded-md ${focusRing}`}
           >
-            <span
-              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[#4b0f3c] text-sm font-semibold text-white"
-              aria-hidden
-            >
-              TG
-            </span>
-            <span className="flex flex-col text-left leading-tight">
-              <span className="text-[11px] font-bold uppercase tracking-wide text-[#7b1b5d] md:text-xs">
-                Tobams
-              </span>
-              <span className="text-[11px] font-bold uppercase tracking-wide text-[#7b1b5d] md:text-xs">
-                Group
-              </span>
-            </span>
+            <Image
+              src={`/images/${encodeURIComponent(HEADER_LOGO)}`}
+              alt="Tobams Group"
+              width={166}
+              height={64}
+              className="h-8 w-auto shrink-0 sm:h-9 md:h-10"
+              sizes="(max-width: 768px) 140px, 166px"
+              priority
+            />
           </a>
           <div className="flex flex-wrap items-center justify-end gap-2">
             <AccountDialogTrigger />
