@@ -244,15 +244,9 @@ export default function Footer() {
           </div>
 
           <div className="mt-10 border-t border-white/20 pt-8 lg:mt-[42px] lg:pt-[28px]">
-            <div className="flex flex-col gap-4 text-[18px] leading-[1.5] text-white/90 lg:flex-row lg:items-center lg:justify-between lg:text-[16px]">
+            <div className="flex flex-col-reverse gap-4 text-[18px] leading-[1.5] text-white/90 lg:flex-row lg:items-center lg:justify-between lg:text-[16px]">
               <p>Copyright © Tobams Group, 2024. All rights reserved.</p>
               <div className="flex flex-wrap gap-x-8 gap-y-3">
-                <a
-                  href="#page-top"
-                  className="underline underline-offset-4 transition hover:text-white"
-                >
-                  Terms and Conditions
-                </a>
                 <a
                   href="#page-top"
                   className="underline underline-offset-4 transition hover:text-white"
@@ -264,6 +258,12 @@ export default function Footer() {
                   className="underline underline-offset-4 transition hover:text-white"
                 >
                   Cookies Policy
+                </a>
+                <a
+                  href="#page-top"
+                  className="underline underline-offset-4 transition hover:text-white"
+                >
+                  Terms and Conditions
                 </a>
               </div>
             </div>
