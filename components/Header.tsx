@@ -1,72 +1,177 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 
-import { PRIMARY_NAV } from "@/lib/siteNav";
+const ACCOUNT_ICON_SRC = "/images/Account icon.png";
 
-const HEADER_LOGO = "Seecondary Logo copy 2.png";
+type NavItem = {
+  label: string;
+  href: string;
+  hasChevron?: boolean;
+  active?: boolean;
+};
 
-const focusRing =
-  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7b1b5d] focus-visible:ring-offset-2";
-
-const navLinkBase =
-  "inline-flex min-h-10 max-w-full shrink-0 items-center whitespace-nowrap rounded-md px-2 py-2 text-center text-[10px] font-medium leading-tight text-[#60575d] transition-colors hover:bg-[#faf7f9] hover:text-[#4b0f3c] sm:px-2.5 md:px-3 md:text-xs lg:text-sm";
+/** Anchors aligned with section ids on the home page. */
+const navItems: NavItem[] = [
+  { label: "About", href: "#page-top", hasChevron: true, active: true },
+  { label: "What We Do", href: "#hero", hasChevron: true },
+  { label: "Jobs", href: "#page-top", hasChevron: true },
+  { label: "Projects", href: "#page-top" },
+  { label: "TG Academy", href: "#learning" },
+  { label: "Strategic Partnership", href: "#page-top" },
+  { label: "Pricing", href: "#contact" },
+  { label: "Book a Consultation", href: "#contact" },
+];
 
 export default function Header() {
-  return (
-    <header className="sticky top-0 z-40 border-b border-[#e8dde3] bg-white shadow-sm">
-      <p className="sr-only">Tobams Group — Training and Development</p>
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-      <div className="border-b border-[#efe7ec] px-3 py-3 sm:px-5 sm:py-4 lg:px-6">
-        <div className="flex items-center justify-between gap-2 sm:gap-4">
-          <a
-            href="#page-top"
-            className={`flex min-h-10 min-w-0 shrink items-center rounded-md ${focusRing}`}
-          >
-            <Image
-              src={`/images/${encodeURIComponent(HEADER_LOGO)}`}
-              alt="Tobams Group"
-              width={166}
-              height={64}
-              className="h-7 w-auto max-w-[min(9.5rem,42vw)] shrink-0 object-contain object-left sm:h-8 sm:max-w-none md:h-9 lg:h-10"
-              sizes="(max-width: 640px) 120px, 166px"
-              priority
-            />
+  return (
+    <header className="w-full bg-[#f5f5f5] text-[#211b20]">
+      <div className="border-b border-[#d7cad3]">
+        <div className="mx-auto flex w-full max-w-[1728px] items-center justify-between px-4 py-4 sm:px-6 md:px-8 lg:px-[92px] lg:py-[34px]">
+          <a href="#page-top" className="shrink-0" aria-label="Tobams Group home">
+            <div className="flex items-center gap-3 lg:gap-[10px]">
+              <div className="relative flex h-[42px] w-[68px] items-center justify-center lg:h-[45px] lg:w-[70px]">
+                <span className="absolute left-0 top-[7px] h-[30px] w-[18px] rounded-full bg-[#6f1455]" />
+                <span className="absolute left-[10px] top-[16px] h-[16px] w-[16px] rounded-full bg-[#f14e5d] ring-[3px] ring-[#f5f5f5]" />
+                <span className="absolute left-[24px] top-[11px] h-[24px] w-[24px] rounded-full bg-[#6f1455]" />
+                <span className="absolute left-[27px] top-[16px] h-[16px] w-[16px] rounded-full bg-[#f14e5d] ring-[3px] ring-[#f5f5f5]" />
+                <span className="absolute right-[10px] top-[16px] h-[16px] w-[16px] rounded-full bg-[#f14e5d] ring-[3px] ring-[#f5f5f5]" />
+                <span className="absolute right-0 top-[7px] h-[30px] w-[18px] rounded-full bg-[#6f1455]" />
+              </div>
+              <div className="leading-none text-[#a32252]">
+                <div className="font-serif text-[17px] tracking-[0.04em] lg:text-[22px]">
+                  TOBAMS
+                </div>
+                <div className="font-serif text-[17px] tracking-[0.04em] lg:text-[22px]">
+                  GROUP
+                </div>
+              </div>
+            </div>
           </a>
-          <div className="flex shrink-0 items-center justify-end gap-1.5 sm:gap-2">
+
+          <div className="hidden items-center gap-4 lg:flex">
+            <button
+              type="button"
+              className="inline-flex min-h-[56px] items-center gap-4 rounded-[4px] bg-[#6d0f50] px-[22px] text-[18px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#6d0f50] focus:ring-offset-2"
+            >
+              <span className="inline-flex h-[34px] w-[34px] shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-white bg-white/10">
+                <Image
+                  src={ACCOUNT_ICON_SRC}
+                  alt=""
+                  width={34}
+                  height={34}
+                  className="h-[34px] w-[34px] object-contain p-0.5"
+                />
+              </span>
+              <span>Account</span>
+              <span aria-hidden="true" className="text-[16px]">
+                ⌄
+              </span>
+            </button>
+
             <a
               href="#contact"
-              className={`inline-flex min-h-10 max-w-[9rem] items-center justify-center rounded-md bg-[#ea4b5f] px-2 py-2 text-center text-[9px] font-semibold leading-tight text-white sm:max-w-none sm:px-3 sm:text-[10px] md:text-xs ${focusRing}`}
+              className="inline-flex min-h-[56px] items-center justify-center rounded-[4px] bg-[#f54f57] px-[28px] text-[18px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#f54f57] focus:ring-offset-2"
             >
               Take Assessment
             </a>
           </div>
+
+          <button
+            type="button"
+            onClick={() => setMobileOpen((prev) => !prev)}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
+            aria-label="Toggle navigation menu"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-[#d7cad3] text-[#6d0f50] focus:outline-none focus:ring-2 focus:ring-[#6d0f50] focus:ring-offset-2 lg:hidden"
+          >
+            <span className="text-2xl leading-none">☰</span>
+          </button>
         </div>
       </div>
 
-      <nav
-        aria-label="Primary"
-        className="border-t border-[#f5eef2]/90 bg-white/98 backdrop-blur-[2px] md:border-t-0 md:bg-transparent md:backdrop-blur-none"
-      >
-        <div className="overflow-x-auto overscroll-x-contain [-ms-overflow-style:none] [scrollbar-width:none] md:overflow-visible md:pb-0 [&::-webkit-scrollbar]:hidden">
-          <ul className="flex w-max max-w-none flex-nowrap items-center gap-x-1 px-3 py-3 pr-5 sm:gap-x-1.5 sm:px-4 sm:py-3.5 sm:pr-6 md:mx-auto md:w-full md:max-w-4xl md:flex-wrap md:justify-center md:gap-x-2 md:gap-y-2 md:px-4 md:pr-4 lg:max-w-5xl lg:px-5 lg:py-4">
-            {PRIMARY_NAV.map((item, index) => (
-              <li key={item.label} className="shrink-0">
+      <div className="hidden border-b border-[#d7cad3] lg:block">
+        <nav aria-label="Primary" className="mx-auto w-full max-w-[1728px] px-4 sm:px-6 md:px-8 lg:px-[240px]">
+          <ul className="flex min-h-[80px] items-center gap-[42px]">
+            {navItems.map((item) => (
+              <li key={item.label}>
                 <a
                   href={item.href}
-                  className={`${navLinkBase} ${focusRing} ${
-                    index === 0
-                      ? "font-semibold text-[#7b1b5d] underline decoration-[#7b1b5d] underline-offset-4"
-                      : ""
+                  className={`inline-flex items-center gap-2 border-b-2 pb-[13px] pt-[15px] text-[20px] font-normal transition hover:text-[#6d0f50] ${
+                    item.active
+                      ? "border-[#7a235f] text-[#6d0f50]"
+                      : "border-transparent text-[#231f22]"
                   }`}
                 >
-                  {item.label}
+                  <span>{item.label}</span>
+                  {item.hasChevron ? (
+                    <span aria-hidden="true" className="text-[14px]">
+                      ⌄
+                    </span>
+                  ) : null}
                 </a>
               </li>
             ))}
           </ul>
+        </nav>
+      </div>
+
+      {mobileOpen ? (
+        <div
+          id="mobile-navigation"
+          className="border-b border-[#d7cad3] bg-[#f5f5f5] lg:hidden"
+        >
+          <nav
+            aria-label="Mobile primary"
+            className="mx-auto w-full max-w-[1728px] px-4 py-4 sm:px-6"
+          >
+            <ul className="flex flex-col gap-2">
+              {navItems.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`flex items-center justify-between rounded-md px-3 py-3 text-base transition hover:bg-[#ece4e9] ${
+                      item.active ? "text-[#6d0f50]" : "text-[#231f22]"
+                    }`}
+                  >
+                    <span>{item.label}</span>
+                    {item.hasChevron ? <span aria-hidden="true">⌄</span> : null}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-4 grid gap-3">
+              <button
+                type="button"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-[#6d0f50] px-4 text-base font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#6d0f50] focus:ring-offset-2"
+              >
+                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-white bg-white/10">
+                  <Image
+                    src={ACCOUNT_ICON_SRC}
+                    alt=""
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 object-contain p-0.5"
+                  />
+                </span>
+                Account
+              </button>
+              <a
+                href="#contact"
+                onClick={() => setMobileOpen(false)}
+                className="inline-flex min-h-12 items-center justify-center rounded-md bg-[#f54f57] px-4 text-base font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#f54f57] focus:ring-offset-2"
+              >
+                Take Assessment
+              </a>
+            </div>
+          </nav>
         </div>
-      </nav>
+      ) : null}
     </header>
   );
 }
