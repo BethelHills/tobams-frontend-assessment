@@ -1,66 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import LearningManagement from "@/components/LearningManagement";
-
-type SplitBlockProps = {
-  title: string;
-  text: string;
-  list: string[];
-  imagePosition: "left" | "right";
-};
-
-function SplitBlock({ title, text, list, imagePosition }: SplitBlockProps) {
-  const image = (
-    <div className="h-40 rounded-lg bg-[linear-gradient(135deg,#d6c0b4,#9bb6ca)]" />
-  );
-
-  const content = (
-    <div>
-      <h3 className="text-[14px] font-semibold text-[#494047]">{title}</h3>
-      <p className="mt-2 text-[8.5px] leading-4 text-[#746a72]">{text}</p>
-      <ul className="mt-3 space-y-1 text-[7.8px] text-[#5f5460]">
-        {list.map((item) => (
-          <li key={item}>✦ {item}</li>
-        ))}
-      </ul>
-    </div>
-  );
-
-  return (
-    <div className="grid gap-4">
-      {imagePosition === "left" ? image : content}
-      {imagePosition === "left" ? content : image}
-    </div>
-  );
-}
+import TrainingBlocks from "@/components/TrainingBlocks";
 
 export default function TobamsTrainingDevelopmentPreview() {
-  const corporateList = [
-    "Leadership Training",
-    "Strategic Planning and Implementation",
-    "Project Management",
-    "Sustainability Training",
-    "Human Resource Training",
-  ];
-
-  const personalList = [
-    "Leadership Development",
-    "Soft Skills Development",
-    "Industry Specific Knowledge",
-    "Technical Skills Enhancement",
-    "Time Management",
-    "Career Development",
-  ];
-
-  const capacityList = [
-    "Tailored Training Programs",
-    "Expert-Led Workshops",
-    "Personalized Mentorship",
-    "Technical Skill Enhancement",
-    "Collaborative Learning Environment",
-    "Ongoing Support and Resources",
-  ];
-
   const managementList = [
     "Enhanced Leadership Skills",
     "Improved Employee Engagement",
@@ -124,30 +67,7 @@ export default function TobamsTrainingDevelopmentPreview() {
 
           <LearningManagement />
 
-          <section className="bg-white px-5 py-8">
-            <div className="grid gap-6">
-              <SplitBlock
-                title="Corporate Trainings"
-                text="Empower your team with our customised Corporate Training programs designed to address the unique needs and objectives of your organisation."
-                list={corporateList}
-                imagePosition="right"
-              />
-
-              <SplitBlock
-                title="Personalised Individual Training"
-                text="Begin a journey of lifelong learning and professional development with Tobams Group's diverse range of training programs for individuals."
-                list={personalList}
-                imagePosition="left"
-              />
-
-              <SplitBlock
-                title="Capacity Development"
-                text="At Tobams Group, we empower individuals and organisations through tailored training programs, expert-led workshops, and personalised mentorship."
-                list={capacityList}
-                imagePosition="right"
-              />
-            </div>
-          </section>
+          <TrainingBlocks />
 
           <section className="px-5 py-6">
             <div className="overflow-hidden rounded-lg bg-[#4a073b] p-4 text-white">
