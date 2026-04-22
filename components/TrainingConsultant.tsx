@@ -35,7 +35,7 @@ export default function TrainingConsultant() {
         <div className="rounded-[2px] bg-[#ece7eb] px-5 py-8 md:px-8 md:py-10 lg:px-[72px] lg:py-[58px]">
           <h2
             id="training-consultant-heading"
-            className="text-[34px] font-medium leading-[1.14] tracking-[-0.02em] text-[#6f1455] md:text-[42px] lg:text-[62px]"
+            className="font-medium tracking-[-0.02em] text-[#6f1455] max-md:whitespace-nowrap max-md:leading-[1.3] max-md:text-[clamp(1rem,4.8vw+0.35rem,2.125rem)] md:text-[42px] md:leading-[1.14] lg:text-[62px]"
           >
             Training The Consultant
           </h2>
