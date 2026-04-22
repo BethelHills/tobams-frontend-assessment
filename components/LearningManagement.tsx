@@ -21,8 +21,15 @@ export default function LearningManagement() {
       className="scroll-mt-4 w-full bg-[#ede7eb] py-10 md:py-14 lg:py-[48px]"
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-[64px] xl:px-[72px]">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[620px_minmax(0,1fr)] lg:gap-[56px]">
-          <div className="mx-auto w-full max-w-[620px]">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[620px_minmax(0,1fr)] lg:items-start lg:gap-[56px]">
+          <h2
+            id="lms-heading"
+            className="text-center text-[34px] font-medium leading-[1.18] tracking-[-0.02em] text-[#6d1354] md:text-[42px] lg:col-start-2 lg:row-start-1 lg:text-left lg:text-[58px]"
+          >
+            Learning Management System
+          </h2>
+
+          <div className="mx-auto w-full max-w-[620px] lg:col-start-1 lg:row-start-1 lg:row-span-2 lg:mx-0">
             <div className="relative aspect-square w-full overflow-hidden rounded-full">
               <Image
                 src={`/images/${encodeURIComponent(LMS_IMAGE)}`}
@@ -34,15 +41,8 @@ export default function LearningManagement() {
             </div>
           </div>
 
-          <div className="w-full max-w-[720px] justify-self-start">
-            <h2
-              id="lms-heading"
-              className="text-center text-[34px] font-medium leading-[1.18] tracking-[-0.02em] text-[#6d1354] md:text-[42px] lg:text-left lg:text-[58px]"
-            >
-              Learning Management System
-            </h2>
-
-            <div className="mt-6 rounded-[10px] bg-[#dbcfd8] px-5 py-5 md:px-7 md:py-7 lg:mt-[28px] lg:px-[28px] lg:py-[26px]">
+          <div className="w-full max-w-[720px] justify-self-start lg:col-start-2 lg:row-start-2">
+            <div className="mt-6 rounded-[10px] bg-[#dbcfd8] px-5 py-5 md:px-7 md:py-7 lg:mt-0 lg:px-[28px] lg:py-[26px]">
               <p className="text-[18px] leading-[1.65] text-[#322b31] md:text-[20px] lg:text-[19px]">
                 TG Academy is a hub of knowledge and skill-building resources
                 designed to empower tech talents on their learning journey. From
