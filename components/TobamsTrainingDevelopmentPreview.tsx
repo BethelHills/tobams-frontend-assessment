@@ -3,17 +3,9 @@ import Hero from "@/components/Hero";
 import LearningManagement from "@/components/LearningManagement";
 import TrainingBlocks from "@/components/TrainingBlocks";
 import ManagementProgram from "@/components/ManagementProgram";
+import TransformationHub from "@/components/TransformationHub";
 
 export default function TobamsTrainingDevelopmentPreview() {
-  const transformationList = [
-    "Strategic Career Guidance",
-    "Leadership Development",
-    "CV Development",
-    "Sustainable Leadership",
-    "Communication Skills",
-    "Business Model",
-  ];
-
   const trainerList = [
     {
       title: "Expert-Led Learning",
@@ -65,42 +57,7 @@ export default function TobamsTrainingDevelopmentPreview() {
 
           <ManagementProgram />
 
-          <section className="px-5 py-6">
-            <div className="rounded-lg bg-[#f1d7df] p-4">
-              <p className="text-[8px] italic text-[#8f7a87]">
-                Learning With Our CEO
-              </p>
-              <h3 className="mt-1 text-[16px] italic text-[#7b3565]">
-                Transformation Hub With Ife Newton
-              </h3>
-              <p className="mt-3 text-[8.5px] leading-4 text-[#655761]">
-                Transformation Hub with Ife Newton is a flagship masterclass series
-                curated by the CEO. It helps clients carve trajectories and
-                leadership capabilities for personal and professional growth.
-              </p>
-              <div className="mt-4 rounded border-[5px] border-[#ef6d45] bg-[#f6ebe6] p-3">
-                <div className="grid gap-4">
-                  <div className="h-32 rounded bg-[linear-gradient(135deg,#1f5962,#c08a63)]" />
-                  <div className="grid grid-cols-2 gap-2">
-                    {transformationList.map((item) => (
-                      <div
-                        key={item}
-                        className="rounded bg-white px-3 py-2 text-[8px] text-[#62515b] shadow-sm"
-                      >
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-                  <button
-                    type="button"
-                    className="w-max rounded bg-[#6f1c57] px-4 py-2 text-[8px] font-medium text-white"
-                  >
-                    Learn More
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
+          <TransformationHub />
 
           <section className="bg-[#ece5e8] px-5 py-8">
             <h3 className="text-[15px] font-semibold text-[#7c4c73]">
