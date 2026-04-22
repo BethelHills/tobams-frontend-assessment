@@ -11,12 +11,12 @@ const items: ConsultantItem[] = [
     text: "Gain insight from seasoned professionals in the field as they mentor you through the subtleties of business analysis.",
   },
   {
-    title: "Interactive Workshops",
-    text: "Engage in hands-on workshops designed to enhance your training capabilities and provide practical insights.",
-  },
-  {
     title: "Comprehensive Curriculum",
     text: "Access a robust curriculum that covers fundamental principles and advanced methodologies, ensuring a well-rounded understanding.",
+  },
+  {
+    title: "Interactive Workshops",
+    text: "Engage in hands-on workshops designed to enhance your training capabilities and provide practical insights.",
   },
   {
     title: "Global Recognition",
