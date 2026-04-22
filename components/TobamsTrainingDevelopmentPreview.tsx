@@ -1,3 +1,5 @@
+import Header from "@/components/Header";
+
 type SplitBlockProps = {
   title: string;
   text: string;
@@ -31,17 +33,6 @@ function SplitBlock({ title, text, list, imagePosition }: SplitBlockProps) {
 }
 
 export default function TobamsTrainingDevelopmentPreview() {
-  const navItems = [
-    "About",
-    "What We Do",
-    "Jobs",
-    "Projects",
-    "TG Academy",
-    "Strategic Partnerships",
-    "Pricing",
-    "Book a Consultation",
-  ];
-
   const corporateList = [
     "Leadership Training",
     "Strategic Planning and Implementation",
@@ -124,60 +115,7 @@ export default function TobamsTrainingDevelopmentPreview() {
   return (
     <div className="min-h-screen bg-[#1f1f1f] py-4 text-[#2c2430]">
       <div className="mx-auto w-full max-w-[430px] bg-[#f5f1f4] shadow-2xl">
-        <header className="px-3 pt-2">
-          <h1 className="mb-2 text-[17px] font-semibold text-[#5f5a61]">
-            Training and Development
-          </h1>
-
-          <div className="overflow-hidden rounded-t-sm bg-white">
-            <div className="flex items-center justify-between px-4 py-4">
-              <div className="flex items-center gap-2">
-                <div className="flex h-7 w-7 items-center justify-center rounded bg-[#4b0f3c] text-sm text-white">
-                  TG
-                </div>
-                <div>
-                  <div className="text-[10px] font-bold uppercase tracking-wide text-[#7b1b5d]">
-                    Tobams
-                  </div>
-                  <div className="text-[10px] font-bold uppercase tracking-wide text-[#7b1b5d]">
-                    Group
-                  </div>
-                </div>
-              </div>
-              <div className="flex gap-2">
-                <button
-                  type="button"
-                  className="rounded bg-[#6f205a] px-3 py-1.5 text-[10px] font-medium text-white"
-                >
-                  Account
-                </button>
-                <button
-                  type="button"
-                  className="rounded bg-[#ea4b5f] px-3 py-1.5 text-[10px] font-medium text-white"
-                >
-                  Take Assessment
-                </button>
-              </div>
-            </div>
-
-            <nav className="border-t border-[#efe7ec] px-3 py-2">
-              <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[8.5px] text-[#60575d]">
-                {navItems.map((item, index) => (
-                  <li
-                    key={item}
-                    className={
-                      index === 0
-                        ? "font-semibold text-[#7b1b5d] underline underline-offset-4"
-                        : ""
-                    }
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
-        </header>
+        <Header />
 
         <main>
           <section className="relative mx-3 overflow-hidden bg-[#20161f]">
