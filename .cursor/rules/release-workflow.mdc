@@ -1,5 +1,5 @@
 ---
-description: After meaningful changes, push to GitHub; Vercel production follows from Git
+description: After meaningful changes, push to GitHub and deploy to Vercel production
 alwaysApply: true
 ---
 
@@ -11,9 +11,8 @@ When a task changes application code, configuration, or assets:
 2. Stage everything that belongs to the change: `git add -A` (or explicit paths).
 3. Commit with a clear message: `git commit -m "<concise message>"`.
 4. Push to **`main`**: `git push origin main`.
-
-**Vercel:** If this repo is linked in the Vercel dashboard with automatic production deploys for `main`, **pushing to GitHub is enough**—Vercel will build and deploy without extra steps.
-
-If Git integration is not set up or you need a one-off CLI deploy from this machine, run from the repo root: `npx vercel@latest --prod --yes` (requires Vercel login).
+5. **Deploy to Vercel production** from the repo root:  
+   `npx vercel@latest --prod --yes`  
+   Run this after every push so production is updated even if Git integration is slow or misconfigured. If the CLI reports a login error, tell the user to run `npx vercel login` and retry.
 
 Do not leave substantive edits uncommitted or unpushed unless the user asks to hold the release.
