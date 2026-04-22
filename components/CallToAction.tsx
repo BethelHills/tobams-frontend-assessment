@@ -8,17 +8,17 @@ export default function CallToAction() {
       className="scroll-mt-4 w-full bg-[#f6f6f6] py-10 md:py-14 lg:py-[56px]"
     >
       <h2 id="cta-heading" className="sr-only">
-        Book a consultation — accelerate growth at your organisation
+        Start your project with Tobams Group — book a consultation
       </h2>
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-[184px]">
         <div className="rounded-[12px] bg-[#6b0d4f] px-5 py-10 text-center md:px-8 md:py-12 lg:px-[40px] lg:py-[42px]">
           <div className="mx-auto max-w-[980px]">
             <p className="text-[21px] font-normal leading-[1.55] tracking-[0.01em] text-white md:text-[24px] lg:text-[18px]">
-              Want to accelerate professional growth and development at your
-              organisation?
+              Don{"'"}t just dream it, let{"'"}s build it!
             </p>
-            <p className="mt-1 text-[21px] font-normal leading-[1.55] tracking-[0.01em] text-white md:text-[24px] lg:text-[18px]">
-              See how we can help.
+            <p className="mt-3 text-[21px] font-normal leading-[1.55] tracking-[0.01em] text-white md:text-[24px] lg:text-[18px]">
+              Click now and start your project with Tobams Group. Your journey to
+              digital excellence begins here.
             </p>
 
             <a
