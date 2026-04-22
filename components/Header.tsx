@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 
 const ACCOUNT_ICON_SRC = "/images/Account icon.png";
+/** Same asset as `Footer` brand mark */
+const HEADER_LOGO = "Seecondary Logo copy 2.png";
 
 type NavItem = {
   label: string;
@@ -31,25 +33,20 @@ export default function Header() {
     <header className="w-full bg-[#f5f5f5] text-[#211b20]">
       <div className="border-b border-[#d7cad3]">
         <div className="mx-auto flex w-full max-w-[1728px] items-center justify-between px-4 py-4 sm:px-6 md:px-8 lg:px-[92px] lg:py-[34px]">
-          <a href="#page-top" className="shrink-0" aria-label="Tobams Group home">
-            <div className="flex items-center gap-3 lg:gap-[10px]">
-              <div className="relative flex h-[42px] w-[68px] items-center justify-center lg:h-[45px] lg:w-[70px]">
-                <span className="absolute left-0 top-[7px] h-[30px] w-[18px] rounded-full bg-[#6f1455]" />
-                <span className="absolute left-[10px] top-[16px] h-[16px] w-[16px] rounded-full bg-[#f14e5d] ring-[3px] ring-[#f5f5f5]" />
-                <span className="absolute left-[24px] top-[11px] h-[24px] w-[24px] rounded-full bg-[#6f1455]" />
-                <span className="absolute left-[27px] top-[16px] h-[16px] w-[16px] rounded-full bg-[#f14e5d] ring-[3px] ring-[#f5f5f5]" />
-                <span className="absolute right-[10px] top-[16px] h-[16px] w-[16px] rounded-full bg-[#f14e5d] ring-[3px] ring-[#f5f5f5]" />
-                <span className="absolute right-0 top-[7px] h-[30px] w-[18px] rounded-full bg-[#6f1455]" />
-              </div>
-              <div className="leading-none text-[#a32252]">
-                <div className="font-serif text-[17px] tracking-[0.04em] lg:text-[22px]">
-                  TOBAMS
-                </div>
-                <div className="font-serif text-[17px] tracking-[0.04em] lg:text-[22px]">
-                  GROUP
-                </div>
-              </div>
-            </div>
+          <a
+            href="#page-top"
+            className="inline-flex shrink-0 items-center rounded-md outline-none ring-offset-2 ring-offset-[#f5f5f5] focus-visible:ring-2 focus-visible:ring-[#6d0f50]"
+            aria-label="Tobams Group home"
+          >
+            <Image
+              src={`/images/${encodeURIComponent(HEADER_LOGO)}`}
+              alt="Tobams Group"
+              width={166}
+              height={64}
+              className="h-8 w-auto max-w-[min(11rem,70vw)] object-contain object-left sm:h-9 md:h-10"
+              sizes="(max-width: 640px) 140px, 166px"
+              priority
+            />
           </a>
 
           <div className="hidden items-center gap-4 lg:flex">
