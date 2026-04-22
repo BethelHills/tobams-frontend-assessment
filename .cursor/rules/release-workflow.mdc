@@ -1,0 +1,17 @@
+---
+description: After meaningful code changes, push to GitHub and deploy to Vercel production
+alwaysApply: true
+---
+
+# Release workflow
+
+When you finish a task that changes application code, configuration, or assets:
+
+1. Run `npm run build` (and `npm run lint` if the change touches TS/TSX) and fix failures before releasing.
+2. Commit with a clear message: `git add -A && git commit -m "<concise message>"`.
+3. Push to `main`: `git push origin main`.
+4. Deploy production to Vercel from the repo root: `npx vercel@latest --prod --yes`.
+
+If there is nothing to commit, skip git steps and only deploy when the user explicitly wants a redeploy.
+
+Do not skip push/deploy after substantive edits unless the user says to hold releases.
