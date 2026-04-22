@@ -86,8 +86,7 @@ const blocks: TrainingBlockData[] = [
       "Sustainability Training",
       "Customised Training",
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1400&auto=format&fit=crop",
+    imageSrc: `/images/${encodeURIComponent("Corporate Trainings image.png")}`,
     imageAlt: "Corporate meeting and training session in a conference room",
   },
   {
@@ -102,8 +101,7 @@ const blocks: TrainingBlockData[] = [
       "Time Management and Productivity",
       "Career Development",
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1573497491765-cf4147a21d86?q=80&w=1400&auto=format&fit=crop",
+    imageSrc: `/images/${encodeURIComponent("Personalised Individual Training image.png")}`,
     imageAlt: "Participant listening during an individual training session",
     reverse: true,
   },
@@ -119,8 +117,7 @@ const blocks: TrainingBlockData[] = [
       "Collaborative Learning Environment",
       "Ongoing Support and Resources",
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1558403194-611308249627?q=80&w=1400&auto=format&fit=crop",
+    imageSrc: `/images/${encodeURIComponent("Capacity Development image.png")}`,
     imageAlt: "Team workshop focused on business charts and planning",
   },
 ];
