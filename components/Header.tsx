@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 
-import AccountDialogTrigger from "@/components/AccountDialogTrigger";
 import { PRIMARY_NAV } from "@/lib/siteNav";
 
 const HEADER_LOGO = "Seecondary Logo copy 2.png";
@@ -35,7 +34,6 @@ export default function Header() {
             />
           </a>
           <div className="flex shrink-0 items-center justify-end gap-1.5 sm:gap-2">
-            <AccountDialogTrigger />
             <a
               href="#contact"
               className={`inline-flex min-h-10 max-w-[9rem] items-center justify-center rounded-md bg-[#ea4b5f] px-2 py-2 text-center text-[9px] font-semibold leading-tight text-white sm:max-w-none sm:px-3 sm:text-[10px] md:text-xs ${focusRing}`}
