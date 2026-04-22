@@ -25,11 +25,11 @@ export default function Testimonials() {
         image: `/images/${encodeURIComponent("Chinonso Nwankwo.png")}`,
       },
       {
-        name: "Tolu Adebayo",
-        role: "Operations Lead, VisionWorks",
-        text: "Their training programs were practical, well-structured, and easy to apply. We saw immediate improvement in how our team approached execution and communication.",
+        name: "Sarah Johnson",
+        role: "CEO of Tech Innovations Inc.",
+        text: "Tobams Group is a true partner in our journey to digital excellence. Their creativity and technical expertise have propelled our projects to new heights. Their work is top-notch, and the results speaks for themselves. I can't recommend them enough!",
         image:
-          "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=300&auto=format&fit=crop",
       },
     ],
     [],
