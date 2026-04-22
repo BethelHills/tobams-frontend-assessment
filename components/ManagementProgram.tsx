@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import SectionCtaLink from "@/components/SectionCtaLink";
 import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
 
 const MANAGEMENT_PROGRAM_IMAGE = "Frame 1618869831.png";
@@ -21,6 +22,7 @@ export default function ManagementProgram() {
         className="h-auto w-full rounded-lg object-contain md:rounded-xl"
         sizes={CONTENT_IMAGE_SIZES}
       />
+      <SectionCtaLink href="#contact">Learn more</SectionCtaLink>
     </section>
   );
 }

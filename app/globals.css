@@ -19,7 +19,35 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+#main-content {
+  scroll-margin-top: 1rem;
+}
+
+#main-content :target,
+.scroll-mt-4 {
+  scroll-margin-top: 1rem;
+}
+
+:where(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid #7b1b5d;
+  outline-offset: 2px;
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 0.5);
 }

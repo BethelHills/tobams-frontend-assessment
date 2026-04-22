@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import SectionCtaLink from "@/components/SectionCtaLink";
 import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
 
 const TESTIMONIALS_IMAGE = "Testimonials.png";
@@ -23,6 +24,7 @@ export default function Testimonials() {
           sizes={CONTENT_IMAGE_SIZES}
         />
       </div>
+      <SectionCtaLink href="#contact">Work with Tobams Group</SectionCtaLink>
     </section>
   );
 }

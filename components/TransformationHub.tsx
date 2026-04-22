@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import SectionCtaLink from "@/components/SectionCtaLink";
 import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
 
 const TRANSFORMATION_HUB_IMAGE = "18.png";
@@ -22,6 +23,7 @@ export default function TransformationHub() {
         sizes={CONTENT_IMAGE_SIZES}
         decoding="async"
       />
+      <SectionCtaLink href="#contact">Learn more</SectionCtaLink>
     </section>
   );
 }
