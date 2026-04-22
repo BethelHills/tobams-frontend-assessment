@@ -192,10 +192,7 @@ export default function Footer() {
               </div>
 
               <div className="order-3 lg:order-2 lg:border-r lg:border-white/20 lg:px-[26px]">
-                <h3 className="text-[24px] font-medium leading-[1.3] text-white lg:text-[18px] lg:opacity-0">
-                  Nigeria
-                </h3>
-                <div className="mt-4 lg:mt-0">
+                <div>
                   <p className="text-[18px] font-medium leading-[1.35] text-[#ff5a73] lg:text-[17px]">
                     Nigeria
                   </p>
