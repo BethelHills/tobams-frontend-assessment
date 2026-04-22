@@ -10,22 +10,19 @@ export default function Testimonials() {
         name: "Aisha Yusuf",
         role: "Founder, CraftHub NG",
         text: "Working with Tobams Group on our website was a breeze. They understood our vision and transformed it into a beautiful online space. Highly recommend their Website Design service!",
-        image:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300&auto=format&fit=crop",
+        image: `/images/${encodeURIComponent("Aisha Yusuf.png")}`,
       },
       {
         name: "John Davies",
         role: "Marketing Manager, E-Commerce Emporium",
         text: "Tobams Group's Digital Marketing strategies gave our brand the boost it needed. Simple yet powerful techniques that delivered tangible results. A pleasure to collaborate with!",
-        image:
-          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format&fit=crop",
+        image: `/images/${encodeURIComponent("John Davies.png")}`,
       },
       {
         name: "Chinonso Nwankwo",
         role: "HR Director, FutureTech Solutions",
         text: "Tobams Group has been instrumental in our talent acquisition journey. Their Tech Talent Solution service consistently connects us with the right professionals. Reliable and straightforward.",
-        image:
-          "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format&fit=crop",
+        image: `/images/${encodeURIComponent("Chinonso Nwankwo.png")}`,
       },
       {
         name: "Tolu Adebayo",
@@ -76,7 +73,7 @@ export default function Testimonials() {
               <div className="flex items-start gap-4">
                 <Image
                   src={item.image}
-                  alt=""
+                  alt={item.name}
                   width={54}
                   height={54}
                   className="h-[54px] w-[54px] shrink-0 rounded-full object-cover lg:h-[52px] lg:w-[52px]"
