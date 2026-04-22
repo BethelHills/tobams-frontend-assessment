@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 
 type SplitBlockProps = {
   title: string;
@@ -118,30 +119,7 @@ export default function TobamsTrainingDevelopmentPreview() {
         <Header />
 
         <main>
-          <section className="relative mx-3 overflow-hidden bg-[#20161f]">
-            <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(88,13,72,0.7),rgba(13,11,16,0.8))]" />
-            <div className="absolute left-[-30px] top-10 h-36 w-20 rotate-12 rounded-full bg-[#941b74]/25 blur-xl" />
-            <div className="absolute right-[-20px] top-8 h-40 w-24 rounded-full bg-[#f05a68]/10 blur-xl" />
-            <div className="relative px-6 py-10 text-center text-white">
-              <span className="inline-block rounded bg-[#d32c84] px-3 py-1 text-[8px] font-semibold uppercase tracking-[0.18em] text-white">
-                What We Do
-              </span>
-              <h2 className="mt-5 text-[18px] font-semibold">
-                Training and Development
-              </h2>
-              <p className="mx-auto mt-3 max-w-[290px] text-[9px] leading-4 text-white/80">
-                Our comprehensive range of programs and resources is designed to
-                enhance skills, broaden knowledge, and propel careers forward in{" "}
-                {"today's"} ever-evolving landscape.
-              </p>
-              <button
-                type="button"
-                className="mt-6 rounded bg-[#7f1d61] px-4 py-2 text-[9px] font-medium text-white shadow-lg shadow-[#7f1d61]/20"
-              >
-                Book a Consultation
-              </button>
-            </div>
-          </section>
+          <Hero />
 
           <section className="bg-[#e9e0e6] px-5 py-8">
             <div className="grid gap-5">
