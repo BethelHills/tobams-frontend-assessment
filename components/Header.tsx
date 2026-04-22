@@ -16,7 +16,7 @@ const navLinkBase =
 export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-[#e8dde3] bg-white shadow-sm">
-      <h1 className="sr-only">Tobams Group — Training and Development</h1>
+      <p className="sr-only">Tobams Group — Training and Development</p>
 
       <div className="border-b border-[#efe7ec] px-3 py-3 sm:px-5 sm:py-4 lg:px-6">
         <div className="flex items-center justify-between gap-2 sm:gap-4">
