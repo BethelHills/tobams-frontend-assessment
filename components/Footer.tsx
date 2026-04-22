@@ -1,3 +1,7 @@
+import Image from "next/image";
+
+const HEADER_LOGO = "Seecondary Logo copy 2.png";
+
 type FooterLink = {
   label: string;
   href: string;
@@ -96,19 +100,19 @@ export default function Footer() {
         <div className="mx-auto w-full max-w-[1512px] px-4 py-10 sm:px-6 md:px-10 lg:px-[64px] lg:py-[54px]">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[390px_1fr_1fr_1fr] lg:gap-[88px]">
             <div>
-              <div className="flex items-center gap-4">
-                <div className="flex h-[54px] w-[72px] items-center justify-center rounded-[10px] bg-[linear-gradient(135deg,#7c1a5c,#ff4f63)] text-[13px] font-semibold tracking-[0.16em] text-white">
-                  TG
-                </div>
-                <div className="text-[#ff5a73]">
-                  <div className="text-[22px] font-medium leading-none tracking-[0.04em]">
-                    TOBAMS
-                  </div>
-                  <div className="mt-1 text-[22px] font-medium leading-none tracking-[0.04em]">
-                    GROUP
-                  </div>
-                </div>
-              </div>
+              <a
+                href="#page-top"
+                className="inline-flex min-h-[54px] items-center rounded-md outline-none ring-offset-2 ring-offset-[#2a001a] focus-visible:ring-2 focus-visible:ring-white"
+              >
+                <Image
+                  src={`/images/${encodeURIComponent(HEADER_LOGO)}`}
+                  alt="Tobams Group"
+                  width={166}
+                  height={64}
+                  className="h-8 w-auto max-w-[min(11rem,70vw)] object-contain object-left sm:h-9 md:h-10"
+                  sizes="(max-width: 640px) 140px, 166px"
+                />
+              </a>
 
               <p className="mt-10 max-w-[340px] text-[18px] leading-[1.6] text-white/90 lg:text-[17px]">
                 Tobams Group is an innovative consultancy firm reshaping the
