@@ -1,6 +1,8 @@
 import Image from "next/image";
 
 const HEADER_LOGO = "Seecondary Logo copy 2.png";
+const MAIL_ICON = "material-symbols_mail.png";
+const PHONE_ICON = "ic_round-phone.png";
 
 type FooterLink = {
   label: string;
@@ -215,9 +217,13 @@ export default function Footer() {
                     href="mailto:theteam@tobamsgroup.com"
                     className="flex items-start gap-3 text-[18px] leading-[1.5] text-white/95 transition hover:text-white lg:items-center lg:gap-4 lg:text-[17px]"
                   >
-                    <span aria-hidden="true" className="shrink-0 text-[#ff5a73]">
-                      ✉
-                    </span>
+                    <Image
+                      src={`/images/${encodeURIComponent(MAIL_ICON)}`}
+                      alt=""
+                      width={24}
+                      height={24}
+                      className="mt-0.5 h-6 w-6 shrink-0 object-contain lg:mt-0"
+                    />
                     <span className="min-w-0 break-all sm:break-normal">
                       theteam@tobamsgroup.com
                     </span>
@@ -226,9 +232,13 @@ export default function Footer() {
                     href="tel:+447886600748"
                     className="flex items-center gap-3 text-[18px] leading-[1.5] text-white/95 transition hover:text-white lg:gap-4 lg:text-[17px]"
                   >
-                    <span aria-hidden="true" className="shrink-0 text-[#ff5a73]">
-                      ✆
-                    </span>
+                    <Image
+                      src={`/images/${encodeURIComponent(PHONE_ICON)}`}
+                      alt=""
+                      width={24}
+                      height={24}
+                      className="h-6 w-6 shrink-0 object-contain"
+                    />
                     <span>+447886600748</span>
                   </a>
                 </div>
