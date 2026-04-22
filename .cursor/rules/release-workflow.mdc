@@ -1,11 +1,11 @@
 ---
-description: Push to main → Vercel builds → live. No CLI for normal releases.
+description: git add/commit/push main → Vercel builds → live. No CLI.
 alwaysApply: true
 ---
 
 # Release workflow
 
-## Simple understanding (keep this)
+## Flow (keep this)
 
 **You push → Vercel builds → live.**
 
@@ -19,7 +19,9 @@ From the repo root:
 
 1. `npm run lint` and `npm run build` — fix failures before pushing.
 2. `git add .`
-3. `git commit -m "update"`
+3. `git commit -m "your message"` — use a short, clear message that describes the change (not empty; avoid meaningless text).
 4. `git push origin main`
 
-That push triggers Vercel when the repo is connected. Do not skip these steps after real edits unless the user asks to hold the release.
+That push is what starts the pipeline: **push → Vercel builds → live** (when the repo is connected to Vercel and `main` is the production branch).
+
+Do not skip these steps after real edits unless the user asks to hold the release.
