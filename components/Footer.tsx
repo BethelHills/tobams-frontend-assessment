@@ -99,7 +99,10 @@ function FooterSocialIcon({ name }: { name: (typeof socialLinks)[number]["icon"]
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#2a001a] text-white" aria-label="Tobams Group">
+    <footer
+      className="w-full bg-[var(--color-purple-selection-purple)] text-white"
+      aria-label="Tobams Group"
+    >
       <section className="border-b border-white/60">
         <div className="mx-auto flex w-full max-w-[1512px] flex-col gap-6 px-4 py-8 sm:px-6 md:px-10 lg:flex-row lg:items-center lg:justify-between lg:px-[64px] lg:py-[48px]">
           <div>
@@ -113,7 +116,7 @@ export default function Footer() {
 
           <a
             href="#contact"
-            className="inline-flex min-h-[56px] items-center justify-center rounded-[6px] bg-[#7c1a5c] px-8 text-[20px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#2a001a] lg:min-h-[52px] lg:min-w-[160px] lg:px-[28px] lg:text-[18px]"
+            className="inline-flex min-h-[56px] items-center justify-center rounded-[6px] bg-[#7c1a5c] px-8 text-[20px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[var(--color-purple-selection-purple)] lg:min-h-[52px] lg:min-w-[160px] lg:px-[28px] lg:text-[18px]"
           >
             Get In Touch
           </a>
@@ -126,7 +129,7 @@ export default function Footer() {
             <div>
               <a
                 href="#page-top"
-                className="inline-flex min-h-[54px] items-center rounded-md outline-none ring-offset-2 ring-offset-[#2a001a] focus-visible:ring-2 focus-visible:ring-white"
+                className="inline-flex min-h-[54px] items-center rounded-md outline-none ring-offset-2 ring-offset-[var(--color-purple-selection-purple)] focus-visible:ring-2 focus-visible:ring-white"
               >
                 <Image
                   src={`/images/${encodeURIComponent(HEADER_LOGO)}`}
@@ -153,7 +156,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={item.label}
-                    className="inline-flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white text-[24px] font-medium text-[#1b1b1b] transition hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#2a001a]"
+                    className="inline-flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white text-[24px] font-medium text-[#1b1b1b] transition hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[var(--color-purple-selection-purple)]"
                   >
                     <FooterSocialIcon name={item.icon} />
                   </a>
