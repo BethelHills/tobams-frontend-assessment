@@ -129,15 +129,15 @@ export default function Footer() {
             <div>
               <a
                 href="#page-top"
-                className="inline-flex min-h-[54px] items-center rounded-md outline-none ring-offset-2 ring-offset-[var(--color-purple-selection-purple)] focus-visible:ring-2 focus-visible:ring-white"
+                className="inline-flex min-h-[72.61px] items-center rounded-md outline-none ring-offset-2 ring-offset-[var(--color-purple-selection-purple)] focus-visible:ring-2 focus-visible:ring-white"
               >
                 <Image
                   src={`/images/${encodeURIComponent(HEADER_LOGO)}`}
                   alt="Tobams Group"
-                  width={166}
-                  height={64}
-                  className="h-8 w-auto max-w-[min(11rem,70vw)] object-contain object-left sm:h-9 md:h-10"
-                  sizes="(max-width: 640px) 140px, 166px"
+                  width={188}
+                  height={73}
+                  className="h-[72.61px] w-[188px] object-contain object-left"
+                  sizes="188px"
                 />
               </a>
 
