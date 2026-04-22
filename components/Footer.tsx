@@ -103,7 +103,7 @@ export default function Footer() {
       className="w-full bg-[var(--color-purple-selection-purple)] text-white"
       aria-label="Tobams Group"
     >
-      <section className="border-b border-white/60">
+      <section className="border-b border-white/60 bg-[var(--color-purple-selection-purple-90)]">
         <div className="mx-auto flex w-full max-w-[1512px] flex-col gap-6 px-4 py-8 sm:px-6 md:px-10 lg:flex-row lg:items-center lg:justify-between lg:px-[64px] lg:py-[48px]">
           <div>
             <p className="text-[20px] leading-[1.35] text-white/90 lg:text-[18px]">
@@ -116,7 +116,7 @@ export default function Footer() {
 
           <a
             href="#contact"
-            className="inline-flex min-h-[56px] items-center justify-center rounded-[6px] bg-[#7c1a5c] px-8 text-[20px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[var(--color-purple-selection-purple)] lg:min-h-[52px] lg:min-w-[160px] lg:px-[28px] lg:text-[18px]"
+            className="inline-flex min-h-[56px] items-center justify-center rounded-[6px] bg-[#7c1a5c] px-8 text-[20px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[var(--color-purple-selection-purple-90)] lg:min-h-[52px] lg:min-w-[160px] lg:px-[28px] lg:text-[18px]"
           >
             Get In Touch
           </a>

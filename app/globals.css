@@ -5,6 +5,8 @@
   --foreground: #171717;
   /* Figma: Shades / Purple Selection / Purple (100%) */
   --color-purple-selection-purple: #11040e;
+  /* Figma: Shades / Purple Selection / Purple (90%) */
+  --color-purple-selection-purple-90: #1d0617;
 }
 
 @theme inline {
