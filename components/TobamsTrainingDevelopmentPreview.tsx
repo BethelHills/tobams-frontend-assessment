@@ -5,6 +5,7 @@ import TrainingBlocks from "@/components/TrainingBlocks";
 import ManagementProgram from "@/components/ManagementProgram";
 import TransformationHub from "@/components/TransformationHub";
 import TrainingConsultant from "@/components/TrainingConsultant";
+import CallToAction from "@/components/CallToAction";
 
 export default function TobamsTrainingDevelopmentPreview() {
   const testimonials = [
@@ -43,23 +44,7 @@ export default function TobamsTrainingDevelopmentPreview() {
 
           <TrainingConsultant />
 
-          <section className="px-5 py-8">
-            <div className="rounded bg-[#6b0f52] px-8 py-8 text-center text-white">
-              <p className="text-[9px] text-white/80">
-                Want to accelerate professional growth and development at your
-                organisation?
-              </p>
-              <h3 className="mt-2 text-[11px] font-medium">
-                See how we can help.
-              </h3>
-              <button
-                type="button"
-                className="mt-4 rounded bg-white px-4 py-2 text-[8px] font-semibold text-[#6b0f52]"
-              >
-                Book a Consultation
-              </button>
-            </div>
-          </section>
+          <CallToAction />
 
           <section className="px-5 pb-8">
             <h3 className="text-center text-[18px] font-semibold text-[#333]">
