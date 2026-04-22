@@ -1,62 +1,58 @@
+"use client";
+
+import Image from "next/image";
+
 import AccountDialogTrigger from "@/components/AccountDialogTrigger";
+import ImageOverlayLink from "@/components/ImageOverlayLink";
+import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
 import { PRIMARY_NAV } from "@/lib/siteNav";
 
-const focusRing =
-  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7b1b5d] focus-visible:ring-offset-2";
+const HEADER_IMAGE = "Component 1.png";
 
 export default function Header() {
   return (
     <header className="px-3 pt-2 md:px-5 md:pt-4 xl:px-8 xl:pt-6">
       <h1 className="sr-only">Tobams Group — Training and Development</h1>
       <div className="overflow-hidden rounded-t-sm bg-white md:rounded-t-none">
-        <div className="flex flex-col border-b border-[#efe7ec]">
-          <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-4">
-            <a
-              href="#page-top"
-              className={`flex min-h-11 items-center gap-2 rounded-md ${focusRing}`}
-            >
-              <span
-                className="flex h-7 w-7 shrink-0 items-center justify-center rounded bg-[#4b0f3c] text-sm text-white"
-                aria-hidden
-              >
-                TG
-              </span>
-              <span className="flex flex-col leading-tight">
-                <span className="text-[10px] font-bold uppercase tracking-wide text-[#7b1b5d]">
-                  Tobams
-                </span>
-                <span className="text-[10px] font-bold uppercase tracking-wide text-[#7b1b5d]">
-                  Group
-                </span>
-              </span>
-            </a>
-            <div className="flex flex-wrap items-center justify-end gap-2">
-              <AccountDialogTrigger />
-              <a
-                href="#contact"
-                className={`inline-flex min-h-11 items-center justify-center rounded bg-[#ea4b5f] px-3 py-2 text-center text-[10px] font-medium text-white md:text-xs ${focusRing}`}
-              >
-                Take Assessment
-              </a>
-            </div>
+        <div className="relative w-full">
+          <Image
+            src={`/images/${encodeURIComponent(HEADER_IMAGE)}`}
+            alt="Tobams Group — header with logo, account, take assessment, and primary navigation"
+            width={1440}
+            height={173}
+            className="pointer-events-none h-auto w-full select-none object-contain object-top"
+            sizes={CONTENT_IMAGE_SIZES}
+            priority
+          />
+
+          <ImageOverlayLink
+            href="#page-top"
+            ariaLabel="Tobams Group — home"
+            className="left-[1%] top-[6%] h-[45%] w-[34%] min-h-11 sm:left-[2%] sm:top-[8%]"
+          />
+
+          <div className="absolute right-[24%] top-[6%] z-10 h-[40%] w-[22%] min-h-11 sm:right-[26%] sm:top-[8%] sm:h-[38%] sm:w-[20%]">
+            <AccountDialogTrigger variant="overlay" />
           </div>
-          <nav aria-label="Primary" className="border-t border-[#efe7ec] px-2 py-2 md:px-3">
-            <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[8.5px] text-[#60575d] md:gap-x-4 md:text-xs">
-              {PRIMARY_NAV.map((item, index) => (
-                <li key={item.label}>
-                  <a
-                    href={item.href}
-                    className={`inline-flex min-h-11 items-center rounded px-1 py-2 underline-offset-4 ${focusRing} ${
-                      index === 0
-                        ? "font-semibold text-[#7b1b5d] underline"
-                        : "hover:text-[#4b0f3c]"
-                    }`}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+
+          <ImageOverlayLink
+            href="#contact"
+            ariaLabel="Take assessment"
+            className="right-[1%] top-[6%] h-[40%] w-[22%] min-h-11 sm:right-[2%] sm:top-[8%] sm:w-[22%]"
+          />
+
+          <nav
+            aria-label="Primary"
+            className="absolute bottom-0 left-0 right-0 z-10 flex h-[46%] min-h-[40px] sm:h-[48%]"
+          >
+            {PRIMARY_NAV.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                aria-label={item.label}
+                className="min-h-11 flex-1 bg-transparent transition-colors hover:bg-black/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7b1b5d]"
+              />
+            ))}
           </nav>
         </div>
       </div>

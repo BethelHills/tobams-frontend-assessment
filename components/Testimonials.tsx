@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import SectionCtaLink from "@/components/SectionCtaLink";
 import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
 
 const TESTIMONIALS_IMAGE = "Testimonials.png";
@@ -14,7 +13,7 @@ export default function Testimonials() {
       <h2 id="testimonials-heading" className="sr-only">
         Client testimonials
       </h2>
-      <div className="mx-auto w-full max-w-full">
+      <div className="relative mx-auto w-full max-w-full">
         <Image
           src={`/images/${TESTIMONIALS_IMAGE}`}
           alt="Testimonials from Anita Yusuf, John Okechukwu, Chisom Nnamdi, and other Tobams Group clients"
@@ -24,7 +23,6 @@ export default function Testimonials() {
           sizes={CONTENT_IMAGE_SIZES}
         />
       </div>
-      <SectionCtaLink href="#contact">Work with Tobams Group</SectionCtaLink>
     </section>
   );
 }

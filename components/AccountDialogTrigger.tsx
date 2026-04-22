@@ -7,18 +7,33 @@ import { CONTACT_EMAIL } from "@/lib/siteNav";
 const focusRing =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7b1b5d] focus-visible:ring-offset-2";
 
-export default function AccountDialogTrigger() {
+type AccountDialogTriggerProps = {
+  /** When set, button is stretched for image overlay hit areas (invisible on the art). */
+  variant?: "default" | "overlay";
+  className?: string;
+};
+
+export default function AccountDialogTrigger({
+  variant = "default",
+  className = "",
+}: AccountDialogTriggerProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const titleId = useId();
+
+  const base =
+    variant === "overlay"
+      ? `flex h-full w-full min-h-11 items-center justify-center rounded bg-transparent p-0 text-transparent shadow-none ${focusRing} hover:bg-white/10`
+      : `min-h-11 min-w-[4.5rem] rounded bg-[#6f205a] px-3 py-2 text-[10px] font-medium text-white md:text-xs ${focusRing}`;
 
   return (
     <>
       <button
         type="button"
-        className={`min-h-11 min-w-[4.5rem] rounded bg-[#6f205a] px-3 py-2 text-[10px] font-medium text-white md:text-xs ${focusRing}`}
+        className={`${base} ${className}`.trim()}
+        aria-label="Account — open account options"
         onClick={() => dialogRef.current?.showModal()}
       >
-        Account
+        {variant === "default" ? "Account" : <span className="sr-only">Account</span>}
       </button>
       <dialog
         ref={dialogRef}

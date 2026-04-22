@@ -1,7 +1,8 @@
 import Image from "next/image";
 
-import SectionCtaLink from "@/components/SectionCtaLink";
+import ImageOverlayLink from "@/components/ImageOverlayLink";
 import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
+import { mailtoConsult } from "@/lib/siteNav";
 
 const MANAGEMENT_PROGRAM_IMAGE = "Frame 1618869831.png";
 
@@ -14,15 +15,22 @@ export default function ManagementProgram() {
       <h2 id="management-program-heading" className="sr-only">
         Management Development Program
       </h2>
-      <Image
-        src={`/images/${encodeURIComponent(MANAGEMENT_PROGRAM_IMAGE)}`}
-        alt="Management Development Program — leadership outcomes and organisational impact"
-        width={1440}
-        height={847}
-        className="h-auto w-full rounded-lg object-contain md:rounded-xl"
-        sizes={CONTENT_IMAGE_SIZES}
-      />
-      <SectionCtaLink href="#contact">Learn more</SectionCtaLink>
+      <div className="relative w-full">
+        <Image
+          src={`/images/${encodeURIComponent(MANAGEMENT_PROGRAM_IMAGE)}`}
+          alt=""
+          width={1440}
+          height={847}
+          className="pointer-events-none h-auto w-full rounded-lg object-contain md:rounded-xl"
+          sizes={CONTENT_IMAGE_SIZES}
+          role="presentation"
+        />
+        <ImageOverlayLink
+          href={mailtoConsult("Learn more — Management Development Program")}
+          ariaLabel="Learn more about the Management Development Program"
+          className="bottom-[4%] left-1/2 h-[10%] w-[min(68%,19rem)] min-h-11 -translate-x-1/2 sm:bottom-[5%]"
+        />
+      </div>
     </section>
   );
 }

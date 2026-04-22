@@ -1,7 +1,8 @@
 import Image from "next/image";
 
-import SectionCtaLink from "@/components/SectionCtaLink";
+import ImageOverlayLink from "@/components/ImageOverlayLink";
 import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
+import { mailtoConsult } from "@/lib/siteNav";
 
 const LMS_IMAGE = "D. LMS Block.png";
 
@@ -15,17 +16,22 @@ export default function LearningManagement() {
       <h2 id="lms-heading" className="sr-only">
         Learning Management System
       </h2>
-      <div className="mx-auto w-full max-w-full">
+      <div className="relative mx-auto w-full max-w-full">
         <Image
           src={`/images/${encodeURIComponent(LMS_IMAGE)}`}
-          alt="TG Academy learning management system — courses, skills, and Learn More"
+          alt=""
           width={1440}
           height={744}
-          className="h-auto w-full object-contain"
+          className="pointer-events-none h-auto w-full object-contain"
           sizes={CONTENT_IMAGE_SIZES}
+          role="presentation"
+        />
+        <ImageOverlayLink
+          href={mailtoConsult("Learn more — TG Academy")}
+          ariaLabel="Learn more about TG Academy"
+          className="bottom-[4%] left-1/2 h-[11%] w-[min(70%,20rem)] min-h-11 -translate-x-1/2 sm:bottom-[5%]"
         />
       </div>
-      <SectionCtaLink href="#contact">Learn more</SectionCtaLink>
     </section>
   );
 }

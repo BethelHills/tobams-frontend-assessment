@@ -1,14 +1,8 @@
 import Image from "next/image";
 
+import ImageOverlayLink from "@/components/ImageOverlayLink";
 import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
-import {
-  CONTACT_EMAIL,
-  CONTACT_PHONE_DISPLAY,
-  CONTACT_PHONE_TEL,
-} from "@/lib/siteNav";
-
-const focusRing =
-  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#6b0f52]";
+import { mailtoConsult } from "@/lib/siteNav";
 
 const CTA_IMAGE = "D. CTA.png";
 
@@ -22,38 +16,22 @@ export default function CallToAction() {
       <h2 id="cta-heading" className="sr-only">
         Book a consultation — accelerate growth at your organisation
       </h2>
-      <div className="mx-auto w-full max-w-full overflow-hidden rounded-lg md:rounded-xl">
+      <div className="relative mx-auto w-full max-w-full overflow-hidden rounded-lg md:rounded-xl">
         <Image
           src={`/images/${encodeURIComponent(CTA_IMAGE)}`}
-          alt="Call to action — see how we can help and book a consultation"
+          alt=""
           width={1134}
           height={204}
-          className="block h-auto w-full object-contain"
+          className="pointer-events-none block h-auto w-full object-contain"
           sizes={CONTENT_IMAGE_SIZES}
+          role="presentation"
+        />
+        <ImageOverlayLink
+          href={mailtoConsult("Book a consultation")}
+          ariaLabel="Book a consultation"
+          className="right-[4%] top-[20%] h-[58%] w-[min(44%,14rem)] min-h-11 sm:right-[6%] sm:top-[18%] sm:h-[60%]"
         />
       </div>
-      <div className="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
-        <a
-          href={`mailto:${CONTACT_EMAIL}?subject=Consultation%20request`}
-          className={`inline-flex min-h-11 items-center justify-center rounded-md bg-[#6b0f52] px-4 py-3 text-center text-sm font-semibold text-white shadow-sm ${focusRing}`}
-        >
-          Email to book a consultation
-        </a>
-        <a
-          href={`tel:${CONTACT_PHONE_TEL}`}
-          className={`inline-flex min-h-11 items-center justify-center rounded-md border-2 border-[#6b0f52] bg-white px-4 py-3 text-center text-sm font-semibold text-[#6b0f52] ${focusRing}`}
-        >
-          Call {CONTACT_PHONE_DISPLAY}
-        </a>
-      </div>
-      <p className="mt-3 text-center text-xs text-neutral-600">
-        <a
-          href={`mailto:${CONTACT_EMAIL}`}
-          className="font-medium text-[#6b0f52] underline underline-offset-2"
-        >
-          {CONTACT_EMAIL}
-        </a>
-      </p>
     </section>
   );
 }
