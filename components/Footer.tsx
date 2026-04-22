@@ -171,7 +171,7 @@ export default function Footer() {
 
           <div className="mt-12 rounded-[12px] bg-[#24131c] px-5 py-6 md:px-6 md:py-7 lg:mt-[54px] lg:px-[24px] lg:py-[28px]">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.2fr_1.2fr_0.8fr] lg:gap-0">
-              <div className="lg:border-r lg:border-white/20 lg:px-0 lg:pr-[26px]">
+              <div className="order-2 lg:order-1 lg:border-r lg:border-white/20 lg:px-0 lg:pr-[26px]">
                 <h3 className="text-[24px] font-medium leading-[1.3] text-white lg:text-[18px]">
                   Registered Offices
                 </h3>
@@ -189,7 +189,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="lg:border-r lg:border-white/20 lg:px-[26px]">
+              <div className="order-3 lg:order-2 lg:border-r lg:border-white/20 lg:px-[26px]">
                 <h3 className="text-[24px] font-medium leading-[1.3] text-white lg:text-[18px] lg:opacity-0">
                   Nigeria
                 </h3>
@@ -206,25 +206,27 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="lg:pl-[26px]">
+              <div className="order-1 lg:order-3 lg:pl-[26px]">
                 <h3 className="text-[24px] font-medium leading-[1.3] text-white lg:text-[18px]">
                   Contact Information
                 </h3>
-                <div className="mt-4 space-y-4">
+                <div className="mt-4 flex flex-col gap-3 lg:gap-4">
                   <a
                     href="mailto:theteam@tobamsgroup.com"
-                    className="flex items-center gap-4 text-[18px] leading-[1.5] text-white/95 transition hover:text-white lg:text-[17px]"
+                    className="flex items-start gap-3 text-[18px] leading-[1.5] text-white/95 transition hover:text-white lg:items-center lg:gap-4 lg:text-[17px]"
                   >
-                    <span aria-hidden="true" className="text-[#ff5a73]">
+                    <span aria-hidden="true" className="shrink-0 text-[#ff5a73]">
                       ✉
                     </span>
-                    <span>theteam@tobamsgroup.com</span>
+                    <span className="min-w-0 break-all sm:break-normal">
+                      theteam@tobamsgroup.com
+                    </span>
                   </a>
                   <a
                     href="tel:+447886600748"
-                    className="flex items-center gap-4 text-[18px] leading-[1.5] text-white/95 transition hover:text-white lg:text-[17px]"
+                    className="flex items-center gap-3 text-[18px] leading-[1.5] text-white/95 transition hover:text-white lg:gap-4 lg:text-[17px]"
                   >
-                    <span aria-hidden="true" className="text-[#ff5a73]">
+                    <span aria-hidden="true" className="shrink-0 text-[#ff5a73]">
                       ✆
                     </span>
                     <span>+447886600748</span>
