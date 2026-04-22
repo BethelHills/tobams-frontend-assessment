@@ -28,7 +28,7 @@ export default function TransformationHub() {
 
           <h2
             id="transformation-hub-heading"
-            className="mt-3 text-[32px] font-medium italic leading-[1.15] tracking-[-0.02em] text-[#6c1854] md:text-[42px] lg:mt-[10px] lg:text-[56px]"
+            className="mt-3 font-medium italic tracking-[-0.02em] text-[#6c1854] max-md:whitespace-nowrap max-md:leading-[1.3] max-md:text-[clamp(0.8125rem,3.35vw+0.28rem,2.125rem)] md:text-[42px] md:leading-[1.15] lg:mt-[10px] lg:text-[56px]"
           >
             Transformation Hub With Jite Newton
           </h2>
