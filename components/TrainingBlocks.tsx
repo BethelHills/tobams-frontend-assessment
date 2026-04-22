@@ -141,6 +141,8 @@ export default function TrainingBlocks() {
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-[60px]">
         <div className="space-y-14 md:space-y-16 lg:space-y-[104px]">
+          <GrowthLearning />
+
           {blocks.map((block) => (
             <TrainingBlock
               key={block.title}
