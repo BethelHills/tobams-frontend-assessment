@@ -5,8 +5,7 @@ import { mailtoConsult, PRIMARY_NAV } from "@/lib/siteNav";
 const whatWeDoNav = PRIMARY_NAV.find((item) => item.label === "What We Do");
 const WHAT_WE_DO_HREF = whatWeDoNav?.href ?? "#hero";
 
-const HERO_BG =
-  "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop";
+const HERO_IMAGE = "Hero image.jpg";
 
 export default function Hero() {
   return (
@@ -17,7 +16,7 @@ export default function Hero() {
     >
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <Image
-          src={HERO_BG}
+          src={`/images/${encodeURIComponent(HERO_IMAGE)}`}
           alt=""
           fill
           className="object-cover object-center"
