@@ -10,13 +10,13 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative mx-3 scroll-mt-4 overflow-hidden bg-[#20161f] md:mx-5 xl:mx-8"
+      className="scroll-mt-4 px-4 pt-4 sm:px-6 sm:pt-6 lg:px-8 lg:pt-8"
       aria-labelledby="hero-heading"
     >
       <h2 id="hero-heading" className="sr-only">
         Training and Development — hero
       </h2>
-      <div className="relative w-full">
+      <div className="relative w-full overflow-hidden rounded-lg bg-[#20161f] sm:rounded-xl lg:rounded-2xl">
         <Image
           src={`/images/${encodeURIComponent(HERO_IMAGE)}`}
           alt=""

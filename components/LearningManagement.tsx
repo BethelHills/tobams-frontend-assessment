@@ -10,7 +10,7 @@ export default function LearningManagement() {
   return (
     <section
       id="learning"
-      className="scroll-mt-4 bg-[#e9e0e6] px-4 py-6 md:px-6 md:py-8 xl:px-8 xl:py-10"
+      className="scroll-mt-4 bg-[#e9e0e6] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12"
       aria-labelledby="lms-heading"
     >
       <h2 id="lms-heading" className="sr-only">

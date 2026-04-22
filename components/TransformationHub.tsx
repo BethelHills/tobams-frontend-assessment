@@ -9,13 +9,13 @@ const TRANSFORMATION_HUB_IMAGE = "18.png";
 export default function TransformationHub() {
   return (
     <section
-      className="w-full px-0"
+      className="w-full px-4 sm:px-6 lg:px-8"
       aria-labelledby="transformation-hub-heading"
     >
       <h2 id="transformation-hub-heading" className="sr-only">
         Transformation Hub With Ife Newton
       </h2>
-      <div className="relative w-full">
+      <div className="relative w-full overflow-hidden rounded-lg sm:rounded-xl lg:rounded-2xl">
         <Image
           src={`/images/${TRANSFORMATION_HUB_IMAGE}`}
           alt=""

@@ -7,7 +7,7 @@ const TESTIMONIALS_IMAGE = "Testimonials.png";
 export default function Testimonials() {
   return (
     <section
-      className="px-4 pb-6 md:px-6 md:pb-8 xl:px-8 xl:pb-10"
+      className="px-4 pb-10 sm:px-6 sm:pb-12 lg:px-8 lg:pb-14"
       aria-labelledby="testimonials-heading"
     >
       <h2 id="testimonials-heading" className="sr-only">

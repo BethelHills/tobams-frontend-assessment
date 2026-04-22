@@ -10,7 +10,7 @@ export default function CallToAction() {
   return (
     <section
       id="contact"
-      className="scroll-mt-4 px-4 py-6 md:px-6 md:py-8 xl:px-8 xl:py-10"
+      className="scroll-mt-4 px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12"
       aria-labelledby="cta-heading"
     >
       <h2 id="cta-heading" className="sr-only">

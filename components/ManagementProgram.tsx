@@ -9,7 +9,7 @@ const MANAGEMENT_PROGRAM_IMAGE = "Frame 1618869831.png";
 export default function ManagementProgram() {
   return (
     <section
-      className="px-4 py-5 md:px-6 md:py-6 xl:px-8 xl:py-8"
+      className="px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12"
       aria-labelledby="management-program-heading"
     >
       <h2 id="management-program-heading" className="sr-only">

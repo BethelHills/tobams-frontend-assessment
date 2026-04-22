@@ -10,7 +10,7 @@ export default function TrainingConsultant() {
   return (
     <section
       id="consulting"
-      className="scroll-mt-4 bg-[#ece5e8] px-4 py-6 md:px-6 md:py-8 xl:px-8 xl:py-10"
+      className="scroll-mt-4 bg-[#ece5e8] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12"
       aria-labelledby="training-consultant-heading"
     >
       <h2 id="training-consultant-heading" className="sr-only">

@@ -11,14 +11,18 @@ import TransformationHub from "@/components/TransformationHub";
 
 export default function TobamsTrainingDevelopmentPreview() {
   return (
-    <div className="min-h-screen bg-[#1f1f1f] px-3 py-4 text-[#2c2430] md:px-5 md:py-6 xl:px-8 xl:py-10">
+    <div className="min-h-screen bg-[#ebe3e8] text-[#2c2430]">
       <div
         id="page-top"
-        className="mx-auto w-full max-w-[425px] overflow-hidden bg-[#f5f1f4] shadow-2xl md:max-w-3xl md:rounded-xl md:shadow-2xl xl:max-w-7xl"
+        className="mx-auto min-h-screen w-full max-w-7xl overflow-hidden bg-[#f5f1f4] shadow-[0_0_0_1px_rgba(0,0,0,0.04),0_4px_24px_rgba(75,15,60,0.06)] sm:my-4 sm:rounded-xl sm:shadow-md md:my-6 lg:max-w-[90rem] lg:rounded-2xl lg:shadow-lg"
       >
         <Header />
 
-        <main id="main-content" tabIndex={-1}>
+        <main
+          id="main-content"
+          tabIndex={-1}
+          className="flex flex-col gap-0 pb-10 sm:pb-12 lg:pb-16"
+        >
           <Hero />
 
           <LearningManagement />
