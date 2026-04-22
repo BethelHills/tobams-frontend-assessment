@@ -1,42 +1,91 @@
 import Image from "next/image";
 
-import ImageOverlayLink from "@/components/ImageOverlayLink";
-import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
-import {
-  CONTENT_ART_FRAME,
-  CONTENT_IMAGE_CLASS,
-  SECTION_PAD_X,
-  SECTION_PAD_Y,
-} from "@/lib/sectionLayout";
 import { mailtoConsult } from "@/lib/siteNav";
 
-const TRANSFORMATION_HUB_IMAGE = "18.png";
+const HUB_IMAGE = "Transformation Hub image.png";
+
+const topics = [
+  "Strategic Career Guidance",
+  "Leadership Development",
+  "CV Development",
+  "Sustainability Leadership",
+  "Communication Skills",
+  "Business Model",
+];
 
 export default function TransformationHub() {
   return (
     <section
-      className={`scroll-mt-4 w-full bg-[#f7f1f5] ${SECTION_PAD_X} ${SECTION_PAD_Y}`}
       aria-labelledby="transformation-hub-heading"
+      className="scroll-mt-4 w-full bg-[#f6f6f6] py-10 md:py-14 lg:py-[56px]"
     >
-      <h2 id="transformation-hub-heading" className="sr-only">
-        Transformation Hub With Ife Newton
-      </h2>
-      <div className={CONTENT_ART_FRAME}>
-        <Image
-          src={`/images/${TRANSFORMATION_HUB_IMAGE}`}
-          alt=""
-          width={1440}
-          height={780}
-          className={`${CONTENT_IMAGE_CLASS} object-top`}
-          sizes={CONTENT_IMAGE_SIZES}
-          role="presentation"
-          decoding="async"
-        />
-        <ImageOverlayLink
-          href={mailtoConsult("Learn more — Transformation Hub")}
-          ariaLabel="Learn more about Transformation Hub with Ife Newton"
-          className="bottom-[6%] left-1/2 h-[10%] w-[min(62%,17rem)] min-h-11 -translate-x-1/2 sm:bottom-[7%]"
-        />
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-[80px]">
+        <div className="rounded-[24px] bg-[#f1d3db] px-5 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-[46px] lg:py-[42px]">
+          <p className="text-[18px] italic leading-[1.2] text-[#0f79f2] md:text-[20px] lg:text-[17px]">
+            Learning With Our CEO:
+          </p>
+
+          <h2
+            id="transformation-hub-heading"
+            className="mt-3 text-[32px] font-medium italic leading-[1.15] tracking-[-0.02em] text-[#6c1854] md:text-[42px] lg:mt-[10px] lg:text-[56px]"
+          >
+            Transformation Hub With Jite Newton
+          </h2>
+
+          <p className="mt-6 max-w-[1500px] text-[18px] leading-[1.6] text-[#2b2328] md:text-[19px] lg:mt-[28px] lg:text-[18px]">
+            Transformation Hub with Jite Newton is a flagship webinar series
+            curated by the CEO, Dr. Jite Newton. Designed to elevate career
+            trajectories and leadership capabilities, this exclusive event offers
+            invaluable insights and strategies for personal and professional
+            growth. Whether you{"'"}re seeking to advance your career or enhance
+            your leadership skills, the Transformation Hub provides a
+            transformative learning experience to unlock your full potential and
+            drive success in your endeavours.
+          </p>
+
+          <div className="mt-8 rounded-[18px] border-[3px] border-[#ef6842] bg-[#f4dde3] p-4 md:p-5 lg:mt-[30px] lg:p-[14px]">
+            <div className="grid grid-cols-1 gap-5 lg:grid-cols-[676px_minmax(0,1fr)] lg:gap-[36px]">
+              <div className="relative min-h-[280px] w-full overflow-hidden rounded-[12px] lg:min-h-[390px]">
+                <Image
+                  src={`/images/${encodeURIComponent(HUB_IMAGE)}`}
+                  alt="Woman standing in front of illuminated digital reflections"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1023px) 100vw, 676px"
+                />
+              </div>
+
+              <div className="rounded-[14px] bg-[#f6e7eb] px-4 py-4 md:px-5 md:py-5 lg:px-[24px] lg:py-[22px]">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:gap-[16px]">
+                  {topics.map((topic) => (
+                    <div
+                      key={topic}
+                      className="flex min-h-[68px] items-center gap-4 rounded-[14px] bg-white px-5 text-[18px] leading-[1.3] text-[#292126] md:text-[19px] lg:min-h-[70px] lg:text-[17px]"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="text-[22px] leading-none text-[#751253]"
+                      >
+                        ϟ
+                      </span>
+                      <span>{topic}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <a
+                  href={mailtoConsult("Learn more — Transformation Hub")}
+                  className="mt-6 inline-flex min-h-[54px] items-center justify-center gap-3 rounded-[4px] bg-[#711053] px-6 text-[18px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#711053] focus:ring-offset-2 focus:ring-offset-[#f6e7eb] lg:mt-[28px] lg:min-h-[52px] lg:px-[28px] lg:text-[17px]"
+                >
+                  <span>Learn More</span>
+                  <span aria-hidden="true" className="text-[22px] leading-none">
+                    ↗
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
