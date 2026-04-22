@@ -11,37 +11,35 @@ import TransformationHub from "@/components/TransformationHub";
 
 export default function TobamsTrainingDevelopmentPreview() {
   return (
-    <div className="min-h-screen bg-[#ebe3e8] text-[#2c2430]">
-      <div
-        id="page-top"
-        className="isolate mx-auto min-h-screen w-full max-w-7xl bg-[#f5f1f4] shadow-[0_0_0_1px_rgba(0,0,0,0.04),0_4px_24px_rgba(75,15,60,0.06)] sm:my-4 sm:rounded-xl sm:shadow-md md:my-6 lg:max-w-[90rem] lg:rounded-2xl lg:shadow-lg"
+    <div
+      id="page-top"
+      className="isolate min-h-screen w-full bg-[#f5f1f4] text-[#2c2430]"
+    >
+      <Header />
+
+      <main
+        id="main-content"
+        tabIndex={-1}
+        className="flex flex-col gap-6 sm:gap-8 lg:gap-10 pb-10 sm:pb-12 lg:pb-16"
       >
-        <Header />
+        <Hero />
 
-        <main
-          id="main-content"
-          tabIndex={-1}
-          className="flex flex-col gap-6 sm:gap-8 lg:gap-10 pb-10 sm:pb-12 lg:pb-16"
-        >
-          <Hero />
+        <LearningManagement />
 
-          <LearningManagement />
+        <TrainingBlocks />
 
-          <TrainingBlocks />
+        <ManagementProgram />
 
-          <ManagementProgram />
+        <TransformationHub />
 
-          <TransformationHub />
+        <TrainingConsultant />
 
-          <TrainingConsultant />
+        <CallToAction />
 
-          <CallToAction />
+        <Testimonials />
+      </main>
 
-          <Testimonials />
-        </main>
-
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

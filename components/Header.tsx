@@ -18,7 +18,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-[#e8dde3] bg-white shadow-sm">
       <h1 className="sr-only">Tobams Group — Training and Development</h1>
 
-      <div className="border-b border-[#efe7ec] px-4 py-4 sm:px-6 lg:px-8">
+      <div className="border-b border-[#efe7ec] px-4 py-4 sm:px-5 lg:px-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <a
             href="#page-top"
@@ -48,7 +48,7 @@ export default function Header() {
 
       <nav
         aria-label="Primary"
-        className="px-3 py-3 sm:px-5 sm:py-3.5 lg:px-7 lg:py-4"
+        className="px-3 py-3 sm:px-4 sm:py-3.5 lg:px-5 lg:py-4"
       >
         <ul className="flex flex-wrap items-center justify-center gap-x-0.5 gap-y-2 sm:gap-x-1 md:gap-x-2">
           {PRIMARY_NAV.map((item, index) => (

@@ -20,7 +20,7 @@ export default function Footer() {
       <h2 id="site-footer-heading" className="sr-only">
         Tobams Group — footer, links, offices, and legal
       </h2>
-      <div className="relative mx-auto w-full max-w-[min(100%,92rem)] overflow-hidden rounded-t-xl shadow-[0_-8px_40px_-20px_rgba(0,0,0,0.45)] ring-1 ring-white/10 sm:rounded-t-2xl">
+      <div className="relative w-full overflow-hidden shadow-[0_-8px_40px_-20px_rgba(0,0,0,0.45)] ring-1 ring-white/10">
         <Image
           src={`/images/${encodeURIComponent(FOOTER_IMAGE)}`}
           alt="Tobams Group footer with contact details, office locations, and policies"

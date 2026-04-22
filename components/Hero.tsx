@@ -13,27 +13,27 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="scroll-mt-4 w-full px-0 pt-0 sm:px-6 sm:pt-4 lg:px-10 lg:pt-6"
+      className="scroll-mt-4 w-full px-0 pt-0 sm:pt-4 lg:pt-6"
       aria-labelledby="hero-heading"
     >
       <h2 id="hero-heading" className="sr-only">
         Training and Development — hero
       </h2>
 
-      <div className="relative isolate mx-auto w-full overflow-hidden bg-gradient-to-b from-[#2c1a26] via-[#23161f] to-[#181016] shadow-[0_24px_64px_-24px_rgba(0,0,0,0.55)] ring-1 ring-white/[0.08] sm:rounded-b-2xl lg:rounded-b-3xl">
+      <div className="relative isolate w-full overflow-hidden bg-gradient-to-b from-[#2c1a26] via-[#23161f] to-[#181016] shadow-[0_24px_64px_-24px_rgba(0,0,0,0.55)] ring-1 ring-white/[0.08] ring-inset">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(147,27,116,0.18),transparent_55%)]"
         />
 
-        <div className="relative flex w-full justify-center px-3 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10 lg:px-12 lg:py-12">
-          <div className="relative w-full max-w-[min(100%,92rem)]">
+        <div className="relative flex w-full justify-center px-0 py-6 sm:py-8 md:py-10 lg:py-12">
+          <div className="relative w-full">
             <Image
               src={`/images/${encodeURIComponent(HERO_IMAGE)}`}
               alt=""
               width={1440}
               height={511}
-              className="pointer-events-none h-auto w-full object-contain object-center max-sm:max-h-[min(68vh,420px)] sm:max-h-[min(72vh,480px)] md:max-h-[min(74vh,520px)] lg:max-h-[min(76vh,36rem)] xl:max-h-[min(78vh,40rem)]"
+              className="pointer-events-none h-auto w-full max-h-none object-contain object-center max-sm:max-h-[min(68vh,420px)] sm:max-h-[min(78vh,560px)] lg:max-h-[min(82vh,42rem)]"
               sizes={CONTENT_IMAGE_SIZES}
               role="presentation"
               priority
