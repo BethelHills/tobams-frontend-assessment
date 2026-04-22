@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import GrowthLearning from "@/components/GrowthLearning";
+
 type TrainingBlockProps = {
   title: string;
   description: string;

@@ -1,4 +1,8 @@
+import Image from "next/image";
+
 import { mailtoConsult } from "@/lib/siteNav";
+
+const LEARN_MORE_ICON_MOBILE = "heroicons_chevron-up-20-solid.png";
 
 type ConsultantItem = {
   title: string;
@@ -74,7 +78,17 @@ export default function TrainingConsultant() {
             className="mt-8 inline-flex min-h-[54px] items-center justify-center gap-3 rounded-[4px] bg-[#711053] px-6 text-[18px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#711053] focus:ring-offset-2 focus:ring-offset-[#ece7eb] lg:mt-[36px] lg:min-h-[52px] lg:px-[28px] lg:text-[17px]"
           >
             <span>Learn More</span>
-            <span aria-hidden="true" className="text-[22px] leading-none">
+            <Image
+              src={`/images/${encodeURIComponent(LEARN_MORE_ICON_MOBILE)}`}
+              alt=""
+              width={20}
+              height={20}
+              className="h-5 w-5 shrink-0 md:hidden"
+            />
+            <span
+              aria-hidden="true"
+              className="hidden text-[22px] leading-none md:inline"
+            >
               ↗
             </span>
           </a>
