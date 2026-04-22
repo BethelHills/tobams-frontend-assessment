@@ -41,10 +41,10 @@ export default function Header() {
             <Image
               src={`/images/${encodeURIComponent(HEADER_LOGO)}`}
               alt="Tobams Group"
-              width={166}
-              height={64}
-              className="h-8 w-auto max-w-[min(11rem,70vw)] object-contain object-left sm:h-9 md:h-10"
-              sizes="(max-width: 640px) 140px, 166px"
+              width={200}
+              height={77}
+              className="h-10 w-auto max-w-[min(14rem,78vw)] object-contain object-left sm:h-11 md:h-12 lg:h-[52px]"
+              sizes="(max-width: 640px) 180px, (max-width: 1024px) 220px, 240px"
               priority
             />
           </a>
