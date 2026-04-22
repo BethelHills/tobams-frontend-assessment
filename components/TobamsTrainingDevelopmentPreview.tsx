@@ -13,14 +13,14 @@ export default function TobamsTrainingDevelopmentPreview() {
   return (
     <div
       id="page-top"
-      className="isolate min-h-screen w-full bg-[#f5f1f4] text-[#2c2430]"
+      className="isolate min-h-screen w-full overflow-x-clip bg-[#f5f1f4] text-[#2c2430]"
     >
       <Header />
 
       <main
         id="main-content"
         tabIndex={-1}
-        className="flex flex-col gap-6 sm:gap-8 lg:gap-10 pb-10 sm:pb-12 lg:pb-16"
+        className="flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10 pb-8 sm:pb-10 md:pb-12 lg:pb-16"
       >
         <Hero />
 
