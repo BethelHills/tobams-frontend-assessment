@@ -17,8 +17,15 @@ export default function ManagementProgram() {
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-[66px]">
         <div className="rounded-[22px] border-[3px] border-[#e6b62d] bg-[#3c0229] px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8 lg:px-[40px] lg:py-[40px]">
-          <div className="grid items-stretch gap-8 lg:grid-cols-[624px_minmax(0,1fr)] lg:gap-[52px]">
-            <div className="relative min-h-[320px] w-full overflow-hidden rounded-[14px] lg:min-h-[674px]">
+          <div className="grid items-stretch gap-8 lg:grid-cols-[624px_minmax(0,1fr)] lg:items-start lg:gap-[52px]">
+            <h2
+              id="management-program-heading"
+              className="max-w-[620px] text-[32px] font-medium leading-[1.18] tracking-[-0.02em] text-white md:text-[42px] lg:col-start-2 lg:row-start-1 lg:text-[58px]"
+            >
+              Management Development Program
+            </h2>
+
+            <div className="relative min-h-[320px] w-full overflow-hidden rounded-[14px] lg:col-start-1 lg:row-start-1 lg:row-span-2 lg:min-h-[674px]">
               <Image
                 src={`/images/${encodeURIComponent(MDP_IMAGE)}`}
                 alt="Three professionals reviewing a tablet in an office setting"
@@ -28,15 +35,8 @@ export default function ManagementProgram() {
               />
             </div>
 
-            <div className="flex flex-col justify-between py-1 text-white lg:pr-[18px]">
+            <div className="flex flex-col justify-between py-1 text-white lg:col-start-2 lg:row-start-2 lg:pr-[18px]">
               <div>
-                <h2
-                  id="management-program-heading"
-                  className="max-w-[620px] text-[32px] font-medium leading-[1.18] tracking-[-0.02em] text-white md:text-[42px] lg:text-[58px]"
-                >
-                  Management Development Program
-                </h2>
-
                 <p className="mt-6 max-w-[650px] text-[18px] leading-[1.65] text-[#f1deeb] md:text-[20px] lg:mt-[30px] lg:text-[19px]">
                   Tobams Group offers a comprehensive Management Development
                   Program designed to equip corporate organisations with the

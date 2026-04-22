@@ -17,12 +17,13 @@ function TrainingBlock({
   imageAlt,
   reverse = false,
 }: TrainingBlockProps) {
+  /** Mobile: heading copy always before image; desktop preserves alternating layout. */
   const textOrder = reverse
-    ? "order-2 lg:order-2"
-    : "order-2 lg:order-1";
+    ? "order-1 lg:order-2"
+    : "order-1 lg:order-1";
   const imageOrder = reverse
-    ? "order-1 lg:order-1"
-    : "order-1 lg:order-2";
+    ? "order-2 lg:order-1"
+    : "order-2 lg:order-2";
 
   return (
     <section className="w-full">
