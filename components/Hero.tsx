@@ -38,7 +38,7 @@ export default function Hero() {
           </a>
           <h1
             id="hero-title"
-            className="mt-6 text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl"
+            className="mt-6 whitespace-nowrap text-center text-[clamp(1rem,2.5vw+0.875rem,3.75rem)] font-semibold leading-tight text-white"
           >
             Training and Development
           </h1>
