@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
+
 const TRANSFORMATION_HUB_IMAGE = "18.png";
 
 export default function TransformationHub() {
@@ -17,7 +19,7 @@ export default function TransformationHub() {
         width={1440}
         height={780}
         className="block h-auto w-full max-w-full object-contain object-top"
-        sizes="430px"
+        sizes={CONTENT_IMAGE_SIZES}
         decoding="async"
       />
     </section>

@@ -1,12 +1,14 @@
 import Image from "next/image";
 
+import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
+
 const TRAINING_CONSULTANT_IMAGE = "D. Training the consultant.png";
 
 export default function TrainingConsultant() {
   return (
     <section
       id="consulting"
-      className="bg-[#ece5e8] px-5 py-8"
+      className="bg-[#ece5e8] px-4 py-6 md:px-6 md:py-8 xl:px-8 xl:py-10"
       aria-labelledby="training-consultant-heading"
     >
       <h2 id="training-consultant-heading" className="sr-only">
@@ -19,7 +21,7 @@ export default function TrainingConsultant() {
           width={1440}
           height={722}
           className="h-auto w-full object-contain"
-          sizes="(max-width: 430px) 100vw, 430px"
+          sizes={CONTENT_IMAGE_SIZES}
         />
       </div>
     </section>

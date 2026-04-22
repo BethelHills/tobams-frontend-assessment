@@ -1,11 +1,13 @@
 import Image from "next/image";
 
+import { CONTENT_IMAGE_SIZES } from "@/lib/contentImageSizes";
+
 const TESTIMONIALS_IMAGE = "Testimonials.png";
 
 export default function Testimonials() {
   return (
     <section
-      className="px-5 pb-8"
+      className="px-4 pb-6 md:px-6 md:pb-8 xl:px-8 xl:pb-10"
       aria-labelledby="testimonials-heading"
     >
       <h2 id="testimonials-heading" className="sr-only">
@@ -18,7 +20,7 @@ export default function Testimonials() {
           width={1440}
           height={538}
           className="block h-auto w-full object-contain"
-          sizes="(max-width: 430px) 100vw, 430px"
+          sizes={CONTENT_IMAGE_SIZES}
         />
       </div>
     </section>
