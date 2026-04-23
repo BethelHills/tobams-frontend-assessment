@@ -21,7 +21,7 @@ export default function LearningManagement() {
       className="scroll-mt-4 w-full bg-[#ede7eb] py-10 md:py-14 lg:py-[48px]"
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-[64px] xl:px-[72px]">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[620px_minmax(0,1fr)] lg:gap-[56px]">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[620px_minmax(0,1fr)] lg:items-start lg:gap-[56px]">
           <div className="mx-auto w-full max-w-[620px]">
             <div className="relative aspect-square w-full overflow-hidden rounded-full">
               <Image
@@ -34,7 +34,7 @@ export default function LearningManagement() {
             </div>
           </div>
 
-          <div className="w-full max-w-[720px] justify-self-start">
+          <div className="w-full min-w-0 max-w-[720px] justify-self-start">
             <h2
               id="lms-heading"
               className="text-center text-[34px] font-medium leading-[1.18] tracking-[-0.02em] text-[#6d1354] md:text-[42px] lg:text-left lg:text-[58px]"
