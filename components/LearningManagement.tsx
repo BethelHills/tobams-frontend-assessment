@@ -19,10 +19,10 @@ export default function LearningManagement() {
     <section
       id="learning"
       aria-labelledby="lms-heading"
-      className="scroll-mt-4 w-full bg-[#ece7eb] py-10 md:py-14 lg:py-[52px]"
+      className="scroll-mt-4 w-full bg-[#ede7eb] py-10 md:py-14 lg:py-[52px]"
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-[66px]">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[617px_minmax(0,1fr)] lg:gap-[61px]">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[617px_minmax(0,1fr)] lg:items-start lg:gap-[61px]">
           <div className="mx-auto w-full max-w-[617px] lg:mx-0">
             <div className="relative aspect-square w-full overflow-hidden rounded-full">
               <Image
@@ -35,15 +35,15 @@ export default function LearningManagement() {
             </div>
           </div>
 
-          <div className="@container w-full min-w-0 lg:max-w-[695px]">
+          <div className="@container flex w-full min-w-0 flex-col lg:w-full">
             <h2
               id="lms-heading"
-              className="mx-auto w-full max-w-full text-center text-[34px] font-normal leading-[1.18] tracking-[-0.02em] text-[#70104f] md:text-[42px] lg:mx-0 lg:max-w-full lg:text-left lg:text-[clamp(1rem,6.5cqw+0.875rem,3.625rem)] lg:whitespace-nowrap"
+              className="w-full max-w-full text-center text-[34px] font-normal leading-[1.18] tracking-[-0.02em] text-[#70104f] md:text-[42px] lg:text-left lg:text-[clamp(1.5rem,6cqw+0.5rem,3.625rem)] lg:whitespace-nowrap"
             >
               Learning Management System
             </h2>
 
-            <div className="mt-6 min-w-0 rounded-[10px] bg-[#dccfd7] px-5 py-5 md:px-7 md:py-7 lg:mt-[31px] lg:px-[26px] lg:py-[28px]">
+            <div className="mt-6 w-full min-w-0 rounded-[10px] bg-[#dccfd7] px-5 py-5 md:px-7 md:py-7 lg:mt-[31px] lg:px-[26px] lg:py-[28px]">
               <p className="text-[18px] leading-[1.62] text-[#322a31] md:text-[19px] lg:text-[18px]">
                 TG Academy is a hub of knowledge and skill-building resources
                 designed to empower tech talents on their learning journey. From
@@ -60,14 +60,16 @@ export default function LearningManagement() {
                 Some of our courses include:
               </p>
 
-              <ul className="mt-5 grid min-w-0 grid-cols-1 gap-x-5 gap-y-3 text-[18px] leading-[1.4] text-[#322a31] sm:grid-cols-2 lg:mt-[15px] lg:grid-cols-3 lg:gap-x-[26px] lg:gap-y-[13px] lg:text-[17px]">
+              <ul className="mt-5 grid w-full min-w-0 grid-cols-1 gap-x-5 gap-y-3 text-[18px] leading-[1.4] text-[#322a31] sm:grid-cols-2 lg:mt-[15px] lg:grid-cols-3 lg:gap-x-[26px] lg:gap-y-[13px] lg:text-[17px]">
                 {courses.map((course) => (
                   <li
                     key={course}
-                    className="flex min-w-0 items-start gap-3"
+                    className="flex min-w-0 items-start gap-3 lg:items-center"
                   >
-                    <span className="mt-[9px] block h-[5px] w-[5px] shrink-0 rounded-full bg-[#1c151a]" />
-                    <span className="min-w-0 break-words">{course}</span>
+                    <span className="mt-[9px] block h-[5px] w-[5px] shrink-0 rounded-full bg-[#1c151a] lg:mt-0" />
+                    <span className="min-w-0 max-lg:whitespace-normal lg:whitespace-nowrap">
+                      {course}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -75,7 +77,7 @@ export default function LearningManagement() {
 
             <a
               href={mailtoConsult("Learn more — TG Academy")}
-              className="mt-7 inline-flex min-h-[50px] items-center justify-center gap-3 rounded-[4px] bg-[#6f0f50] px-6 text-[18px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#6f0f50] focus:ring-offset-2 focus:ring-offset-[#ece7eb] lg:mt-[35px] lg:min-h-[51px] lg:px-[24px] lg:text-[17px]"
+              className="mt-7 inline-flex min-h-[50px] w-fit items-center justify-center gap-3 rounded-[4px] bg-[#6f0f50] px-6 text-[18px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#6f0f50] focus:ring-offset-2 focus:ring-offset-[#ede7eb] lg:mt-[35px] lg:min-h-[51px] lg:px-[24px] lg:text-[17px]"
             >
               <span>Learn More</span>
               <LearnMoreArrowIcon />
