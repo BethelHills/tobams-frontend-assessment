@@ -59,13 +59,13 @@ export default function LearningManagement() {
                 Some of our courses include:
               </p>
 
-              <ul className="mt-5 grid grid-flow-row grid-cols-1 gap-x-8 gap-y-3 text-[18px] leading-[1.45] text-[#322b31] sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3 sm:items-start lg:mt-[14px] lg:gap-x-10 lg:gap-y-[14px] lg:text-[17px]">
+              <ul className="mt-5 grid w-full max-w-[627.12px] grid-flow-row grid-cols-1 gap-[40px] text-[18px] leading-[1.45] text-[#322b31] sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3 sm:items-stretch lg:mt-[14px] lg:text-[17px]">
                 {courses.map((course) => (
                   <li
                     key={course}
-                    className="flex min-h-[1.45em] items-start gap-3 sm:min-w-0"
+                    className="flex min-h-0 items-start gap-3 sm:min-h-[99px] sm:min-w-0 sm:items-center"
                   >
-                    <span className="mt-[9px] block h-[6px] w-[6px] shrink-0 rounded-full bg-[#1f171d]" />
+                    <span className="mt-[9px] block h-[6px] w-[6px] shrink-0 self-start rounded-full bg-[#1f171d] sm:mt-0 sm:self-center" />
                     <span className="min-w-0 leading-[1.45]">{course}</span>
                   </li>
                 ))}
