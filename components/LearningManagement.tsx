@@ -64,10 +64,10 @@ export default function LearningManagement() {
                 {courses.map((course) => (
                   <li
                     key={course}
-                    className="flex items-start gap-3 lg:items-center"
+                    className="flex items-start gap-3 sm:items-center"
                   >
-                    <span className="mt-[9px] block h-[6px] w-[6px] shrink-0 rounded-full bg-[#1f171d] lg:mt-0" />
-                    <span className="min-w-0 lg:whitespace-nowrap">{course}</span>
+                    <span className="mt-[9px] block h-[6px] w-[6px] shrink-0 rounded-full bg-[#1f171d] sm:mt-0" />
+                    <span className="min-w-0 sm:whitespace-nowrap">{course}</span>
                   </li>
                 ))}
               </ul>
