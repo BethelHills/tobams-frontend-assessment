@@ -55,23 +55,25 @@ export default function LearningManagement() {
                 tech landscape.
               </p>
 
-              <p className="mt-7 text-[20px] font-semibold leading-[1.3] text-[#6d1354] lg:mt-[22px] lg:text-[18px]">
-                Some of our courses include:
-              </p>
+              <div className="mt-7 flex w-full max-w-[675.12px] flex-col gap-[20px] lg:mt-[22px] lg:h-[436px] lg:overflow-y-auto">
+                <p className="shrink-0 text-[20px] font-semibold leading-[1.3] text-[#6d1354] lg:text-[18px]">
+                  Some of our courses include:
+                </p>
 
-              <ul className="mt-5 grid w-full max-w-[627.12px] grid-flow-row grid-cols-1 gap-[40px] text-[18px] leading-[1.45] text-[#322b31] sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3 sm:items-stretch lg:mt-[14px] lg:text-[17px]">
-                {courses.map((course) => (
-                  <li
-                    key={course}
-                    className="flex min-h-0 items-start gap-3 sm:min-h-[99px] sm:min-w-0 sm:items-center"
-                  >
-                    <span className="mt-[9px] block h-[6px] w-[6px] shrink-0 self-start rounded-full bg-[#1f171d] sm:mt-0 sm:self-center" />
-                    <span className="min-w-0 whitespace-nowrap leading-[1.45]">
-                      {course}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+                <ul className="flex min-h-0 flex-1 flex-col gap-[20px] text-[18px] leading-[1.45] text-[#322b31] lg:text-[17px]">
+                  {courses.map((course) => (
+                    <li
+                      key={course}
+                      className="flex min-h-0 items-center gap-3"
+                    >
+                      <span className="block h-[6px] w-[6px] shrink-0 rounded-full bg-[#1f171d]" />
+                      <span className="min-w-0 whitespace-nowrap leading-[1.45]">
+                        {course}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             <a
