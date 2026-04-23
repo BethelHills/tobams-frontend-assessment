@@ -32,7 +32,7 @@ export default function Header() {
   return (
     <header className="w-full bg-[#f5f5f5] text-[#211b20]">
       <div className="border-b border-[#d7cad3]">
-        <div className="mx-auto flex w-full max-w-[1728px] items-center justify-between px-4 py-4 sm:px-6 md:px-8 lg:px-[92px] lg:py-[34px]">
+        <div className="mx-auto flex w-full min-w-0 max-w-[1728px] items-center justify-between px-4 py-4 sm:px-6 md:px-8 lg:px-[92px] lg:py-[34px]">
           <a
             href="#page-top"
             className="inline-flex shrink-0 items-center rounded-md outline-none ring-offset-2 ring-offset-[#f5f5f5] focus-visible:ring-2 focus-visible:ring-[#6d0f50]"
@@ -91,13 +91,16 @@ export default function Header() {
       </div>
 
       <div className="hidden border-b border-[#d7cad3] lg:block">
-        <nav aria-label="Primary" className="mx-auto w-full max-w-[1728px] px-4 sm:px-6 md:px-8 lg:px-[240px]">
-          <ul className="flex min-h-[80px] items-center gap-[42px]">
+        <nav
+          aria-label="Primary"
+          className="mx-auto w-full min-w-0 max-w-[1728px] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-16 2xl:px-[240px]"
+        >
+          <ul className="flex min-h-[80px] min-w-0 flex-wrap items-center gap-x-6 gap-y-2 lg:gap-x-[42px] lg:gap-y-2">
             {navItems.map((item) => (
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className={`inline-flex items-center gap-2 border-b-2 pb-[13px] pt-[15px] text-[20px] font-normal transition hover:text-[#6d0f50] ${
+                  className={`inline-flex items-center gap-2 border-b-2 pb-[13px] pt-[15px] text-[18px] font-normal transition hover:text-[#6d0f50] xl:text-[20px] ${
                     item.active
                       ? "border-[#7a235f] text-[#6d0f50]"
                       : "border-transparent text-[#231f22]"

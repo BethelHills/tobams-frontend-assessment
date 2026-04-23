@@ -12,7 +12,7 @@ export default function Hero() {
     <section
       id="hero"
       aria-labelledby="hero-title"
-      className="scroll-mt-4 relative min-h-[520px] w-full overflow-hidden md:min-h-[620px] lg:min-h-[720px]"
+      className="scroll-mt-4 relative min-h-[520px] w-full overflow-hidden md:min-h-[620px] lg:min-h-[min(720px,calc(100svh-14rem))]"
     >
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <Image
@@ -28,7 +28,7 @@ export default function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-black/70"
       />
-      <div className="relative z-10 mx-auto flex min-h-[520px] w-full max-w-7xl items-center justify-center px-4 py-16 text-center md:min-h-[620px] md:px-6 lg:min-h-[720px] lg:px-8">
+      <div className="relative z-10 mx-auto flex min-h-[520px] w-full max-w-7xl items-center justify-center px-4 py-16 text-center md:min-h-[620px] md:px-6 lg:min-h-[min(720px,calc(100svh-14rem))] lg:px-8">
         <div className="w-full max-w-3xl">
           <a
             href={WHAT_WE_DO_HREF}
@@ -38,7 +38,7 @@ export default function Hero() {
           </a>
           <h1
             id="hero-title"
-            className="mt-6 whitespace-nowrap text-center text-[clamp(1rem,2.5vw+0.875rem,3.75rem)] font-semibold leading-tight text-white"
+            className="mt-6 text-balance text-center text-[clamp(1rem,2.5vw+0.875rem,3.75rem)] font-semibold leading-tight text-white"
           >
             Training and Development
           </h1>

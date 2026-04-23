@@ -20,7 +20,7 @@ export default function Home() {
       <main
         id="main-content"
         tabIndex={-1}
-        className="flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10 pb-8 sm:pb-10 md:pb-12 lg:pb-16"
+        className="flex min-w-0 max-w-full flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10 pb-8 sm:pb-10 md:pb-12 lg:pb-16"
       >
         <Hero />
 
