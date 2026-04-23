@@ -26,7 +26,7 @@ export default function LearningManagement() {
           <div className="@container order-1 w-full min-w-0 lg:order-none lg:col-start-2 lg:row-start-1">
             <h2
               id="lms-heading"
-              className="w-full max-w-full text-center text-[34px] font-normal leading-[1.18] tracking-[-0.02em] text-[#70104f] md:text-[42px] lg:text-left lg:text-[clamp(1.5rem,6cqw+0.5rem,3.625rem)] lg:whitespace-nowrap"
+              className="w-full max-w-full text-center font-normal leading-[1.18] tracking-[-0.02em] text-[#70104f] max-sm:whitespace-nowrap max-sm:text-[clamp(1.125rem,4.2vw+0.75rem,2.125rem)] sm:max-lg:text-[34px] sm:max-lg:whitespace-normal md:max-lg:text-[42px] lg:text-left lg:text-[clamp(1.5rem,6cqw+0.5rem,3.625rem)] lg:whitespace-nowrap"
             >
               Learning Management System
             </h2>
@@ -69,7 +69,7 @@ export default function LearningManagement() {
                     className="flex min-w-0 items-start gap-3 lg:items-center"
                   >
                     <span className="mt-[9px] block h-[5px] w-[5px] shrink-0 rounded-full bg-[#1c151a] lg:mt-0" />
-                    <span className="min-w-0 max-lg:whitespace-normal lg:whitespace-nowrap">
+                    <span className="min-w-0 max-sm:whitespace-nowrap sm:max-lg:whitespace-normal lg:whitespace-nowrap">
                       {course}
                     </span>
                   </li>
