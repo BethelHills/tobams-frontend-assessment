@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { mailtoConsult } from "@/lib/siteNav";
 
-const LEARN_MORE_ICON_MOBILE = "heroicons_chevron-up-20-solid.png";
+const LEARN_MORE_ARROW = "/images/arrow-up-right.png";
 
 type ConsultantItem = {
   title: string;
@@ -79,18 +79,13 @@ export default function TrainingConsultant() {
           >
             <span>Learn More</span>
             <Image
-              src={`/images/${encodeURIComponent(LEARN_MORE_ICON_MOBILE)}`}
+              src={LEARN_MORE_ARROW}
               alt=""
-              width={20}
-              height={20}
-              className="h-5 w-5 shrink-0 md:hidden"
+              width={22}
+              height={22}
+              className="h-6 w-6 shrink-0 lg:h-[22px] lg:w-[22px]"
+              aria-hidden
             />
-            <span
-              aria-hidden="true"
-              className="hidden text-[22px] leading-none md:inline"
-            >
-              ↗
-            </span>
           </a>
         </div>
       </div>
