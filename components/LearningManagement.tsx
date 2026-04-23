@@ -19,32 +19,32 @@ export default function LearningManagement() {
     <section
       id="learning"
       aria-labelledby="lms-heading"
-      className="scroll-mt-4 w-full bg-[#ede7eb] py-10 md:py-14 lg:py-[48px]"
+      className="scroll-mt-4 w-full bg-[#ece7eb] py-10 md:py-14 lg:py-[52px]"
     >
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-[64px] xl:px-[72px]">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[620px_minmax(0,1fr)] lg:gap-[56px]">
-          <div className="mx-auto w-full max-w-[620px]">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-[66px]">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[617px_minmax(0,1fr)] lg:gap-[61px]">
+          <div className="mx-auto w-full max-w-[617px] lg:mx-0">
             <div className="relative aspect-square w-full overflow-hidden rounded-full">
               <Image
                 src={`/images/${encodeURIComponent(LMS_IMAGE)}`}
                 alt="TG Academy — learning management and professional development"
                 fill
                 className="object-cover object-center"
-                sizes="(max-width: 1023px) min(100vw, 620px), 620px"
+                sizes="(max-width: 1023px) min(100vw, 617px), 617px"
               />
             </div>
           </div>
 
-          <div className="w-full max-w-[720px] justify-self-start">
+          <div className="w-full min-w-0 lg:max-w-[695px]">
             <h2
               id="lms-heading"
-              className="text-center text-[34px] font-medium leading-[1.18] tracking-[-0.02em] text-[#6d1354] md:text-[42px] lg:text-left lg:text-[58px]"
+              className="text-center text-[34px] font-normal leading-[1.18] tracking-[-0.02em] text-[#70104f] md:text-[42px] lg:text-left lg:text-[58px]"
             >
               Learning Management System
             </h2>
 
-            <div className="mt-6 rounded-[10px] bg-[#dbcfd8] px-5 py-5 md:px-7 md:py-7 lg:mt-[28px] lg:px-[28px] lg:py-[26px]">
-              <p className="text-[18px] leading-[1.65] text-[#322b31] md:text-[20px] lg:text-[19px]">
+            <div className="mt-6 min-w-0 rounded-[10px] bg-[#dccfd7] px-5 py-5 md:px-7 md:py-7 lg:mt-[31px] lg:px-[26px] lg:py-[28px]">
+              <p className="text-[18px] leading-[1.62] text-[#322a31] md:text-[19px] lg:text-[18px]">
                 TG Academy is a hub of knowledge and skill-building resources
                 designed to empower tech talents on their learning journey. From
                 technical courses covering the latest programming languages and
@@ -56,18 +56,18 @@ export default function LearningManagement() {
                 tech landscape.
               </p>
 
-              <p className="mt-7 text-[20px] font-semibold leading-[1.3] text-[#6d1354] lg:mt-[22px] lg:text-[18px]">
+              <p className="mt-7 text-[20px] font-semibold leading-[1.3] text-[#6e174f] lg:mt-[24px] lg:text-[18px]">
                 Some of our courses include:
               </p>
 
-              <ul className="mt-5 grid min-w-0 grid-cols-1 gap-x-6 gap-y-3 text-[18px] leading-[1.45] text-[#322b31] sm:grid-cols-2 lg:mt-[14px] lg:grid-cols-2 lg:gap-x-8 lg:gap-y-[12px] lg:text-[17px]">
+              <ul className="mt-5 grid min-w-0 grid-cols-1 gap-x-5 gap-y-3 text-[18px] leading-[1.4] text-[#322a31] sm:grid-cols-2 lg:mt-[15px] lg:grid-cols-3 lg:gap-x-[26px] lg:gap-y-[13px] lg:text-[17px]">
                 {courses.map((course) => (
                   <li
                     key={course}
-                    className="flex min-w-0 items-start gap-3 lg:items-center"
+                    className="flex min-w-0 items-start gap-3"
                   >
-                    <span className="mt-[9px] block h-[6px] w-[6px] shrink-0 rounded-full bg-[#1f171d] lg:mt-0" />
-                    <span className="min-w-0 lg:whitespace-nowrap">{course}</span>
+                    <span className="mt-[9px] block h-[5px] w-[5px] shrink-0 rounded-full bg-[#1c151a]" />
+                    <span className="min-w-0 break-words">{course}</span>
                   </li>
                 ))}
               </ul>
@@ -75,7 +75,7 @@ export default function LearningManagement() {
 
             <a
               href={mailtoConsult("Learn more — TG Academy")}
-              className="mt-7 inline-flex min-h-[52px] items-center justify-center gap-3 rounded-[4px] bg-[#711053] px-6 text-[18px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#711053] focus:ring-offset-2 focus:ring-offset-[#ede7eb] lg:mt-[34px] lg:min-h-[50px] lg:px-[24px] lg:text-[17px]"
+              className="mt-7 inline-flex min-h-[50px] items-center justify-center gap-3 rounded-[4px] bg-[#6f0f50] px-6 text-[18px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#6f0f50] focus:ring-offset-2 focus:ring-offset-[#ece7eb] lg:mt-[35px] lg:min-h-[51px] lg:px-[24px] lg:text-[17px]"
             >
               <span>Learn More</span>
               <LearnMoreArrowIcon />
