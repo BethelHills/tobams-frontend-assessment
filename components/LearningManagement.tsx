@@ -25,7 +25,7 @@ export default function LearningManagement() {
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[620px_minmax(0,1fr)] lg:items-start lg:gap-x-[56px] lg:gap-y-7">
           <h2
             id="lms-heading"
-            className="order-1 w-full max-w-[720px] justify-self-center text-center text-[34px] font-medium leading-[1.18] tracking-[-0.02em] text-[#6d1354] md:text-[42px] lg:order-none lg:col-start-2 lg:row-start-1 lg:max-w-[675.12px] lg:min-w-0 lg:justify-self-start lg:text-left lg:text-[58px]"
+            className="order-1 w-full max-w-[720px] justify-self-center text-center text-[34px] font-medium leading-[1.18] tracking-[-0.02em] text-[#6d1354] md:text-[42px] lg:order-none lg:col-start-2 lg:row-start-1 lg:w-full lg:min-w-0 lg:max-w-full lg:justify-self-start lg:text-left lg:text-[58px]"
           >
             Learning Management System
           </h2>
@@ -42,8 +42,8 @@ export default function LearningManagement() {
             </div>
           </div>
 
-          <div className="order-3 w-full min-w-0 max-w-[720px] justify-self-start lg:order-none lg:col-start-2 lg:row-start-2 lg:max-w-[675.12px]">
-            <div className="rounded-[10px] bg-[#dbcfd8] px-5 py-5 md:px-7 md:py-7 lg:flex lg:h-[516px] lg:max-w-[675.12px] lg:flex-col lg:gap-[56px] lg:overflow-x-hidden lg:overflow-y-auto lg:px-[28px] lg:py-[26px]">
+          <div className="order-3 w-full min-w-0 max-w-[720px] justify-self-start lg:order-none lg:col-start-2 lg:row-start-2 lg:max-w-none lg:w-full">
+            <div className="rounded-[10px] bg-[#dbcfd8] px-5 py-5 md:px-7 md:py-7 lg:flex lg:w-full lg:max-w-full lg:flex-col lg:gap-[56px] lg:px-[28px] lg:py-[26px]">
               <p className="shrink-0 text-[18px] leading-[1.65] text-[#322b31] md:text-[20px] lg:text-[19px]">
                 TG Academy is a hub of knowledge and skill-building resources
                 designed to empower tech talents on their learning journey. From
@@ -61,14 +61,16 @@ export default function LearningManagement() {
                   Some of our courses include:
                 </p>
 
-                <ul className="mt-5 grid min-w-0 grid-cols-1 gap-x-6 gap-y-3 text-[18px] leading-[1.45] text-[#322b31] sm:grid-cols-2 lg:mt-0 lg:grid-cols-3 lg:gap-y-[12px] lg:text-[17px]">
+                <ul className="mt-5 grid min-w-0 grid-cols-1 gap-x-6 gap-y-3 text-[18px] leading-[1.45] text-[#322b31] sm:grid-cols-2 lg:mt-0 lg:grid-cols-1 lg:gap-x-0 lg:gap-y-4 lg:text-[17px]">
                 {courses.map((course) => (
                   <li
                     key={course}
                     className="flex items-start gap-3 sm:items-center"
                   >
                     <span className="mt-[9px] block h-[6px] w-[6px] shrink-0 rounded-full bg-[#1f171d] sm:mt-0" />
-                    <span className="min-w-0 sm:whitespace-nowrap">{course}</span>
+                    <span className="min-w-0 sm:whitespace-nowrap lg:whitespace-normal">
+                      {course}
+                    </span>
                   </li>
                 ))}
                 </ul>
