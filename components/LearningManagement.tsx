@@ -22,15 +22,15 @@ export default function LearningManagement() {
       className="scroll-mt-4 w-full bg-[#ede7eb] py-10 md:py-14 lg:py-[52px]"
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-[66px]">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[617px_minmax(0,1fr)] lg:items-start lg:gap-[61px]">
-          <div className="mx-auto w-full max-w-[617px] lg:mx-0">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[560px_minmax(0,1fr)] lg:items-start lg:gap-[48px]">
+          <div className="mx-auto w-full max-w-[617px] lg:mx-0 lg:max-w-[560px]">
             <div className="relative aspect-square w-full overflow-hidden rounded-full">
               <Image
                 src={`/images/${encodeURIComponent(LMS_IMAGE)}`}
                 alt="TG Academy — learning management and professional development"
                 fill
                 className="object-cover object-center"
-                sizes="(max-width: 1023px) min(100vw, 617px), 617px"
+                sizes="(max-width: 1023px) min(100vw, 617px), 560px"
               />
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function LearningManagement() {
               Learning Management System
             </h2>
 
-            <div className="mt-6 w-full min-w-0 rounded-[10px] bg-[#dccfd7] px-5 py-5 md:px-7 md:py-7 lg:mt-[31px] lg:px-[26px] lg:py-[28px]">
+            <div className="mt-6 w-full min-w-0 rounded-[10px] bg-[#dccfd7] px-5 py-5 md:px-7 md:py-7 lg:mt-[31px] lg:px-[22px] lg:py-[28px]">
               <p className="text-[18px] leading-[1.62] text-[#322a31] md:text-[19px] lg:text-[18px]">
                 TG Academy is a hub of knowledge and skill-building resources
                 designed to empower tech talents on their learning journey. From
@@ -60,7 +60,7 @@ export default function LearningManagement() {
                 Some of our courses include:
               </p>
 
-              <ul className="mt-5 grid w-full min-w-0 grid-cols-1 gap-x-5 gap-y-3 text-[18px] leading-[1.4] text-[#322a31] sm:grid-cols-2 lg:mt-[15px] lg:grid-cols-3 lg:gap-x-[26px] lg:gap-y-[13px] lg:text-[17px]">
+              <ul className="mt-5 grid w-full min-w-0 grid-cols-1 gap-x-5 gap-y-3 text-[18px] leading-[1.4] text-[#322a31] sm:grid-cols-2 lg:mt-[15px] lg:grid-cols-3 lg:gap-x-5 lg:gap-y-[13px] lg:text-[17px]">
                 {courses.map((course) => (
                   <li
                     key={course}
