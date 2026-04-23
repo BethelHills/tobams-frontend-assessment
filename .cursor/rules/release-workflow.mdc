@@ -1,27 +1,30 @@
 ---
-description: git add/commit/push main → Vercel builds → live. No CLI.
+description: Git workflow for releases — add, commit, push main → Vercel.
 alwaysApply: true
 ---
 
 # Release workflow
 
-## Flow (keep this)
+## Use this workflow only
 
-**You push → Vercel builds → live.**
+From the repo root, after changes:
 
-**No CLI needed** for normal work.
+```bash
+git add .
+git commit -m "your message"
+git push origin main
+```
+
+Replace `"your message"` with a short, clear description of the change. If there is nothing to commit, `git commit` will exit without creating a commit; still run `git push origin main` to confirm the remote is up to date.
+
+**Push → Vercel builds → live** when the repo is connected and `main` is production.
+
+**No Vercel CLI** required for normal deploys.
 
 ---
 
-## What to run after code changes
+## Before pushing (recommended)
 
-From the repo root:
+When you have edited code, run `npm run lint` and `npm run build` and fix failures **before** the git steps above.
 
-1. `npm run lint` and `npm run build` — fix failures before pushing.
-2. `git add .`
-3. `git commit -m "your message"` — use a short, clear message that describes the change (not empty; avoid meaningless text).
-4. `git push origin main`
-
-That push is what starts the pipeline: **push → Vercel builds → live** (when the repo is connected to Vercel and `main` is the production branch).
-
-Do not skip these steps after real edits unless the user asks to hold the release.
+Do not skip the git workflow after real edits unless the user asks to hold the release.
