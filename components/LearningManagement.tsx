@@ -80,7 +80,7 @@ export default function LearningManagement() {
                 alt=""
                 width={22}
                 height={22}
-                className="shrink-0"
+                className="h-6 w-6 shrink-0 lg:h-[22px] lg:w-[22px]"
                 aria-hidden
               />
             </a>
