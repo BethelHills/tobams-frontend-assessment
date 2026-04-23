@@ -1,9 +1,9 @@
 import Image from "next/image";
 
+import LearnMoreArrowIcon from "@/components/LearnMoreArrowIcon";
 import { mailtoConsult } from "@/lib/siteNav";
 
 const LMS_IMAGE = "LMS image.png";
-const LEARN_MORE_ARROW = "/images/arrow-up-right.png";
 
 export default function LearningManagement() {
   const courses = [
@@ -75,14 +75,7 @@ export default function LearningManagement() {
               className="mt-7 inline-flex min-h-[54px] items-center justify-center gap-3 rounded-[4px] bg-[#711053] px-6 text-[18px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#711053] focus:ring-offset-2 focus:ring-offset-[#ede7eb] lg:mt-[34px] lg:min-h-[52px] lg:px-[28px] lg:text-[17px]"
             >
               <span>Learn More</span>
-              <Image
-                src={LEARN_MORE_ARROW}
-                alt=""
-                width={22}
-                height={22}
-                className="h-6 w-6 shrink-0 lg:h-[22px] lg:w-[22px]"
-                aria-hidden
-              />
+              <LearnMoreArrowIcon />
             </a>
           </div>
         </div>
