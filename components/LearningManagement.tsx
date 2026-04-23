@@ -3,6 +3,7 @@ import Image from "next/image";
 import { mailtoConsult } from "@/lib/siteNav";
 
 const LMS_IMAGE = "LMS image.png";
+const LEARN_MORE_ARROW = "/images/arrow-up-right.png";
 
 export default function LearningManagement() {
   const courses = [
@@ -74,9 +75,14 @@ export default function LearningManagement() {
               className="mt-7 inline-flex min-h-[52px] items-center justify-center gap-3 rounded-[4px] bg-[#711053] px-6 text-[18px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#711053] focus:ring-offset-2 focus:ring-offset-[#ede7eb] lg:mt-[34px] lg:min-h-[50px] lg:px-[24px] lg:text-[17px]"
             >
               <span>Learn More</span>
-              <span aria-hidden="true" className="text-[22px] leading-none">
-                ↗
-              </span>
+              <Image
+                src={LEARN_MORE_ARROW}
+                alt=""
+                width={22}
+                height={22}
+                className="shrink-0"
+                aria-hidden
+              />
             </a>
           </div>
         </div>
