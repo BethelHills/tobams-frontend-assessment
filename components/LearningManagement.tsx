@@ -25,7 +25,7 @@ export default function LearningManagement() {
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[620px_minmax(0,1fr)] lg:items-start lg:gap-x-[56px] lg:gap-y-7">
           <h2
             id="lms-heading"
-            className="order-1 w-full max-w-[720px] justify-self-center text-center text-[34px] font-medium leading-[1.18] tracking-[-0.02em] text-[#6d1354] md:text-[42px] lg:order-none lg:col-start-2 lg:row-start-1 lg:justify-self-start lg:text-left lg:text-[58px]"
+            className="order-1 w-full max-w-[720px] justify-self-center whitespace-nowrap text-center text-[clamp(1.125rem,4vw+0.75rem,2.125rem)] font-medium leading-[1.18] tracking-[-0.02em] text-[#6d1354] md:text-[42px] lg:order-none lg:col-start-2 lg:row-start-1 lg:justify-self-start lg:text-left lg:text-[58px]"
           >
             Learning Management System
           </h2>
