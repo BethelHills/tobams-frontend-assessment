@@ -23,7 +23,16 @@ export default function LearningManagement() {
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-[66px]">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[560px_minmax(0,1fr)] lg:items-start lg:gap-[48px]">
-          <div className="mx-auto w-full max-w-[617px] lg:mx-0 lg:max-w-[560px]">
+          <div className="@container order-1 w-full min-w-0 lg:order-none lg:col-start-2 lg:row-start-1">
+            <h2
+              id="lms-heading"
+              className="w-full max-w-full text-center text-[34px] font-normal leading-[1.18] tracking-[-0.02em] text-[#70104f] md:text-[42px] lg:text-left lg:text-[clamp(1.5rem,6cqw+0.5rem,3.625rem)] lg:whitespace-nowrap"
+            >
+              Learning Management System
+            </h2>
+          </div>
+
+          <div className="order-2 mx-auto w-full max-w-[617px] lg:order-none lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:mx-0 lg:max-w-[560px]">
             <div className="relative aspect-square w-full overflow-hidden rounded-full">
               <Image
                 src={`/images/${encodeURIComponent(LMS_IMAGE)}`}
@@ -35,15 +44,8 @@ export default function LearningManagement() {
             </div>
           </div>
 
-          <div className="@container flex w-full min-w-0 flex-col lg:w-full">
-            <h2
-              id="lms-heading"
-              className="w-full max-w-full text-center text-[34px] font-normal leading-[1.18] tracking-[-0.02em] text-[#70104f] md:text-[42px] lg:text-left lg:text-[clamp(1.5rem,6cqw+0.5rem,3.625rem)] lg:whitespace-nowrap"
-            >
-              Learning Management System
-            </h2>
-
-            <div className="mt-6 w-full min-w-0 rounded-[10px] bg-[#dccfd7] px-5 py-5 md:px-7 md:py-7 lg:mt-[31px] lg:px-[22px] lg:py-[28px]">
+          <div className="order-3 flex w-full min-w-0 flex-col lg:order-none lg:col-start-2 lg:row-start-2 lg:w-full">
+            <div className="w-full min-w-0 rounded-[10px] bg-[#dccfd7] px-5 py-5 md:px-7 md:py-7 lg:px-[22px] lg:py-[28px]">
               <p className="text-[18px] leading-[1.62] text-[#322a31] md:text-[19px] lg:text-[18px]">
                 TG Academy is a hub of knowledge and skill-building resources
                 designed to empower tech talents on their learning journey. From
