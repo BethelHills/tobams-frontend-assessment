@@ -66,7 +66,9 @@ export default function LearningManagement() {
                     className="flex min-h-0 items-start gap-3 sm:min-h-[99px] sm:min-w-0 sm:items-center"
                   >
                     <span className="mt-[9px] block h-[6px] w-[6px] shrink-0 self-start rounded-full bg-[#1f171d] sm:mt-0 sm:self-center" />
-                    <span className="min-w-0 leading-[1.45]">{course}</span>
+                    <span className="min-w-0 whitespace-nowrap leading-[1.45]">
+                      {course}
+                    </span>
                   </li>
                 ))}
               </ul>
