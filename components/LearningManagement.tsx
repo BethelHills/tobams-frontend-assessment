@@ -72,7 +72,7 @@ export default function LearningManagement() {
 
             <a
               href={mailtoConsult("Learn more — TG Academy")}
-              className="mt-7 inline-flex min-h-[52px] items-center justify-center gap-3 rounded-[4px] bg-[#711053] px-6 text-[18px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#711053] focus:ring-offset-2 focus:ring-offset-[#ede7eb] lg:mt-[34px] lg:min-h-[50px] lg:px-[24px] lg:text-[17px]"
+              className="mt-7 inline-flex min-h-[54px] items-center justify-center gap-3 rounded-[4px] bg-[#711053] px-6 text-[18px] font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#711053] focus:ring-offset-2 focus:ring-offset-[#ede7eb] lg:mt-[34px] lg:min-h-[52px] lg:px-[28px] lg:text-[17px]"
             >
               <span>Learn More</span>
               <Image
