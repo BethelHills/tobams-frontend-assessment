@@ -21,27 +21,27 @@ export default function LearningManagement() {
       className="scroll-mt-4 w-full bg-[#ede7eb] py-10 md:py-14 lg:py-[48px]"
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-10 lg:px-[64px] xl:px-[72px]">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[620px_minmax(0,1fr)] lg:items-start lg:gap-[56px]">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[620px_minmax(0,1fr)] lg:items-stretch lg:gap-[56px]">
           <h2
             id="lms-heading"
-            className="text-center text-[34px] font-medium leading-[1.18] tracking-[-0.02em] text-[#6d1354] md:text-[42px] lg:col-start-2 lg:row-start-1 lg:text-left lg:text-[58px]"
+            className="text-center text-[34px] font-medium leading-[1.18] tracking-[-0.02em] text-[#6d1354] md:text-[42px] lg:col-start-2 lg:row-start-1 lg:self-start lg:text-left lg:text-[58px]"
           >
             Learning Management System
           </h2>
 
-          <div className="mx-auto w-full max-w-[620px] lg:col-start-1 lg:row-start-1 lg:row-span-2 lg:mx-0">
-            <div className="relative aspect-square w-full overflow-hidden rounded-full">
+          <div className="mx-auto flex w-full max-w-[620px] justify-center lg:col-start-1 lg:row-start-1 lg:row-span-2 lg:mx-0 lg:max-w-[620px] lg:min-h-0 lg:items-center lg:justify-center lg:justify-self-stretch">
+            <div className="relative aspect-square w-full max-w-[620px] shrink-0 overflow-hidden rounded-full">
               <Image
                 src={`/images/${encodeURIComponent(LMS_IMAGE)}`}
                 alt="TG Academy — learning management and professional development"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 sizes="(max-width: 1023px) min(100vw, 620px), 620px"
               />
             </div>
           </div>
 
-          <div className="w-full max-w-[720px] justify-self-start lg:col-start-2 lg:row-start-2">
+          <div className="w-full max-w-[720px] justify-self-center lg:col-start-2 lg:row-start-2 lg:justify-self-start lg:self-start">
             <div className="mt-6 rounded-[10px] bg-[#dbcfd8] px-5 py-5 md:px-7 md:py-7 lg:mt-0 lg:px-[28px] lg:py-[26px]">
               <p className="text-[18px] leading-[1.65] text-[#322b31] md:text-[20px] lg:text-[19px]">
                 TG Academy is a hub of knowledge and skill-building resources
