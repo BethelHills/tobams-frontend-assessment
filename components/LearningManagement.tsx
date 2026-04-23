@@ -35,10 +35,10 @@ export default function LearningManagement() {
             </div>
           </div>
 
-          <div className="w-full min-w-0 lg:max-w-[695px]">
+          <div className="@container w-full min-w-0 lg:max-w-[695px]">
             <h2
               id="lms-heading"
-              className="text-center text-[34px] font-normal leading-[1.18] tracking-[-0.02em] text-[#70104f] md:text-[42px] lg:text-left lg:text-[58px]"
+              className="mx-auto w-full max-w-full text-center text-[34px] font-normal leading-[1.18] tracking-[-0.02em] text-[#70104f] md:text-[42px] lg:mx-0 lg:max-w-full lg:text-left lg:text-[clamp(1rem,6.5cqw+0.875rem,3.625rem)] lg:whitespace-nowrap"
             >
               Learning Management System
             </h2>
